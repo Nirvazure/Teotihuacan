@@ -1,14 +1,14 @@
 <template>
 <v-container>
-    <v-row>
-        
-    </v-row>
+    <v-toolbar>RookieSlaveBank</v-toolbar>
 </v-container>
 </template>
 
 <script>
 export default {
+    data: () => {
 
+    }
 }
 </script>
 

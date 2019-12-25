@@ -1,8 +1,6 @@
 <template>
 <v-container>
-    <v-row>
-        
-    </v-row>
+<h2>Gallery</h2>
 </v-container>
 </template>
 

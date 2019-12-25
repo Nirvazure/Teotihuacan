@@ -1,9 +1,5 @@
 <template>
-<v-container>
-    <v-row>
-        
-    </v-row>
-</v-container>
+  <h2>Toys</h2>
 </template>
 
 <script>

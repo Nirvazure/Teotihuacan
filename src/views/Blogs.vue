@@ -1,9 +1,5 @@
 <template>
-<v-container>
-    <v-row>
-        
-    </v-row>
-</v-container>
+  <h2>Blogs</h2>
 </template>
 
 <script>
