@@ -1,5 +1,16 @@
 # teotihuacan
 
+### Index
+时差滚动+漂亮的全屏幕Avatar，暗黑风格
+
+### iWeek
+* 灵感笔记IDEAs
+* 每日一句（作为激励的卡片）
+* 那年今日
+
+### Blogs
+* 黑白糖果盒
+* 思维肖申克
 ## Project setup
 ```
 npm install

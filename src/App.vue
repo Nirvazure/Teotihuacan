@@ -3,7 +3,6 @@
     <v-navigation-drawer v-model="leftDrawer" app clipped>
         <v-img class="mx-3 my-3" :src="avatar"></v-img>
         <v-list>
-            <v-subheader>MENU</v-subheader>
             <v-list-item-group v-model="item" color="teal">
                 <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text)">
                     <v-list-item-icon>
@@ -74,6 +73,9 @@ export default {
             {
                 text: "Gallery",
                 icon: "mdi-camera"
+            },{
+              text:'DreamMap',
+              icon:'mdi-map'
             }
         ]
     }),
