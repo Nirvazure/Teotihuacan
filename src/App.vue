@@ -1,7 +1,7 @@
 <template>
 <v-app>
     <v-navigation-drawer v-model="leftDrawer" app clipped>
-        <v-img class="mx-3 my-3" :src="avatar"></v-img>
+        <v-img @click="$router.push({path: `/`})" class="mx-3 my-3" :src="avatar"></v-img>
         <v-list>
             <v-list-item-group v-model="item" color="teal">
                 <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text)">
@@ -9,7 +9,7 @@
                         <v-icon v-text="item.icon"></v-icon>
                     </v-list-item-icon>
                     <v-list-item-content>
-                        <v-list-item-title v-text="item.text"></v-list-item-title>
+                        <v-list-item-title class="font-weight-bold" v-text="item.text"></v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list-item-group>
@@ -22,7 +22,7 @@
         <v-app-bar-nav-icon @click="leftDrawer = !leftDrawer" />
         <v-toolbar-title>Teotihuacan</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-sheet max-width="500">
+        <v-sheet max-width="500" class='ma-8'>
             <v-text-field dense solo-inverted rounded hide-details prepend-inner-icon="mdi-magnify" label="Search" />
         </v-sheet>
         <v-badge color="teal" overlap>
@@ -39,11 +39,11 @@
     <v-content dark>
         <router-view></router-view>
     </v-content>
-    <v-footer app color="teal darken-1" dark>
+    <!-- <v-footer app color="teal darken-1" dark>
         <v-btn text>站酷</v-btn>
         <v-spacer></v-spacer>
         <div>&copy; {{ new Date().getFullYear() }}</div>
-    </v-footer>
+    </v-footer> -->
 </v-app>
 </template>
 
