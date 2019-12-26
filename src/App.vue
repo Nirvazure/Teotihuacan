@@ -30,7 +30,7 @@
             <template v-slot:badge>0</template>
             <v-icon>mdi-bell</v-icon>
         </v-badge>
-        <v-btn icon>
+        <v-btn icon @click='$router.push({path: `/toys`});'>
             <v-icon>mdi-apps</v-icon>
         </v-btn>
         <v-avatar tile @click="rightDrawer = !rightDrawer">

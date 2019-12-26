@@ -1,13 +1,13 @@
 <template>
 <v-container>
     <h2>Gallery</h2>
-    <v-sheet max-width="700">
-        <v-slide-group show-arrows multiple>
-            <v-slide-item v-for='(work,index) in works' :key="index">
-                <v-img aspect-ratio='1.5' :src="work.avatar"></v-img>
+    <!-- <v-sheet> -->
+        <v-slide-group>
+            <v-slide-item v-for='(work,index) in works' :key="index" class="pa-4">
+                <v-img class='ma-4' aspect-ratio='1.5' :src="work.avatar"></v-img>
             </v-slide-item>
         </v-slide-group>
-    </v-sheet>
+    <!-- </v-sheet> -->
 </v-container>
 </template>
 
