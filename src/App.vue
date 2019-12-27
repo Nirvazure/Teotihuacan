@@ -17,6 +17,12 @@
     </v-navigation-drawer>
     <v-navigation-drawer v-model="rightDrawer" app dark right>
         <v-img :src="avatar"></v-img>
+        <v-icon>mdi-wechat</v-icon>
+        <v-icon>mdi-sina-weibo</v-icon>
+        <v-icon>mdi-qqchat</v-icon>
+        <v-icon>mdi-instagram</v-icon>
+        <v-icon>mdi-github-circle</v-icon>
+        <v-icon>mdi-douban</v-icon>
     </v-navigation-drawer>
     <v-app-bar app dark clipped-left>
         <v-app-bar-nav-icon @click="leftDrawer = !leftDrawer" />
@@ -56,7 +62,7 @@ export default {
         item: 1,
         items: [{
                 text: "Toys",
-                icon: "mdi-clock"
+                icon: "mdi-gamepad-square"
             },
             {
                 text: "Idoles",
@@ -64,18 +70,18 @@ export default {
             },
             {
                 text: "Blogs",
-                icon: "mdi-flag"
+                icon: "mdi-soccer"
             },
             {
                 text: "Music",
-                icon: "mdi-camera"
+                icon: "mdi-music"
             },
             {
                 text: "Gallery",
-                icon: "mdi-camera"
-            },{
-              text:'DreamMap',
-              icon:'mdi-map'
+                icon: "mdi-palette"
+            }, {
+                text: 'DreamMap',
+                icon: 'mdi-map'
             }
         ]
     }),
