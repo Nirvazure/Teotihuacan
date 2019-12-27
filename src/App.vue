@@ -17,16 +17,18 @@
     </v-navigation-drawer>
     <v-navigation-drawer v-model="rightDrawer" app dark right>
         <v-img :src="avatar"></v-img>
-        <v-icon>mdi-wechat</v-icon>
-        <v-icon>mdi-sina-weibo</v-icon>
-        <v-icon>mdi-qqchat</v-icon>
-        <v-icon>mdi-instagram</v-icon>
-        <v-icon>mdi-github-circle</v-icon>
-        <v-icon>mdi-douban</v-icon>
+
     </v-navigation-drawer>
     <v-app-bar app dark clipped-left>
         <v-app-bar-nav-icon @click="leftDrawer = !leftDrawer" />
-        <v-toolbar-title>Teotihuacan</v-toolbar-title>
+        <v-toolbar-title>Teotihuacan 
+            <v-icon class='ml-9'>mdi-wechat</v-icon>
+            <v-icon class='ml-2'>mdi-sina-weibo</v-icon>
+            <v-icon>mdi-qqchat</v-icon>
+            <v-icon>mdi-instagram</v-icon>
+            <v-icon>mdi-github-circle</v-icon>
+            <v-icon>mdi-douban</v-icon>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-sheet max-width="500" class='ma-8'>
             <v-text-field dense solo-inverted rounded hide-details prepend-inner-icon="mdi-magnify" label="Search" />
