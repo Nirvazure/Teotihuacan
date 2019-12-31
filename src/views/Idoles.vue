@@ -13,7 +13,6 @@
                     </v-card-subtitle>
                     <v-img aspect-ratio="0.9" :src=idole.avatar class='my-1'></v-img>
                     <v-card-actions>
-
                         <v-spacer></v-spacer>
                         <v-progress-circular :color='idole.color' value="100"></v-progress-circular>
                     </v-card-actions>
