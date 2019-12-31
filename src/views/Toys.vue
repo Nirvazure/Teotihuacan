@@ -1,7 +1,7 @@
 <template>
 <v-container>
     <v-row>
-        <v-col cols="12" md='4' v-for='(toy,index) in toys' :key="index">
+        <v-col cols="12" md='2' v-for='(toy,index) in toys' :key="index">
             <v-card>
                 <v-card-title>{{toy.name}}</v-card-title>
                 <v-card-subtitle>{{toy.description}}</v-card-subtitle>
