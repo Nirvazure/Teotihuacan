@@ -22,12 +22,8 @@
     <v-app-bar app dark clipped-left>
         <v-app-bar-nav-icon @click="leftDrawer = !leftDrawer" />
         <v-toolbar-title>Teotihuacan 
-            <v-icon class='ml-9'>mdi-wechat</v-icon>
             <v-icon class='ml-2'>mdi-sina-weibo</v-icon>
-            <v-icon>mdi-qqchat</v-icon>
-            <v-icon>mdi-instagram</v-icon>
-            <v-icon>mdi-github-circle</v-icon>
-            <v-icon>mdi-douban</v-icon>
+            <v-icon class='ml-2'>mdi-github-circle</v-icon>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-sheet max-width="500" class='ma-8'>
