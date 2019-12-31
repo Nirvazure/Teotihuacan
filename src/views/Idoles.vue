@@ -74,6 +74,27 @@ export default {
                 avatar: require('@/assets/images/idoles/8.jpg'),
                 description: '小丑',
                 color: 'blue lighten-3'
+            },
+            {
+                name: 'Criss Angel',
+                avatar: require('@/assets/images/idoles/12.jpg'),
+                description: 'MindFreak',
+                color: 'blue lighten-3'
+            }, {
+                name: 'Lionel Messi',
+                avatar: require('@/assets/images/idoles/10.jpg'),
+                description: '上帝之手的天蓝色糖果',
+                color: 'blue lighten-3'
+            }, {
+                name: 'Marksim Mrvica',
+                avatar: require('@/assets/images/idoles/11.jpg'),
+                description: '钢琴圣手',
+                color: 'blue lighten-3'
+            }, {
+                name: '奥沙利文',
+                avatar: require('@/assets/images/idoles/9.jpg'),
+                description: '火箭',
+                color: 'blue lighten-3'
             }
         ]
     })
