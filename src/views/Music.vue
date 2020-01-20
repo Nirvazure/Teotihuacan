@@ -1,8 +1,7 @@
 <template>
 <v-container>
     <v-row>
-        <v-col cols='12' md='9'>
-            <v-card>
+            <v-card width="70%">
                 <v-row>
                     <v-col cols='4'>
                         <v-img class='ma-4' :src='album.avatar'></v-img>
@@ -29,9 +28,10 @@
                     <!-- <v-text-field filled v-model='index'></v-text-field> -->
                 </v-card-actions>
             </v-card>
-        </v-col>
-        <v-col cols='12' md='3'>
-            <v-card>
+
+    </v-row>
+            <v-row>
+            <v-card width="70%">
                 <v-list>
                     <v-list-item dense v-for='(song,i) in album.songs' :key="i">
                         <span>{{song}}</span>
@@ -43,8 +43,7 @@
                 </v-list>
             </v-card>
 
-        </v-col>
-    </v-row>
+        </v-row>
 </v-container>
 </template>
 
