@@ -2,6 +2,8 @@
 <v-container>
     <v-row>
             <v-card width="70%">
+                <v-window v-model="window" :show-arrows=true>
+                    <v-window-item v-for="(album,i) in albums" :key="i">
                 <v-row>
                     <v-col cols='4'>
                         <v-img class='ma-4' :src='album.avatar'></v-img>
@@ -15,24 +17,9 @@
 
                     </v-col>
                 </v-row>
-                <v-card-actions>
-                    <v-sheet class="mx-auto" max-width="100%">
-                        <v-slide-group multiple show-arrows @click='dosth'>
-                            <v-slide-item v-for="(album,i) in albums" :key="i" >
-                                <v-avatar size='70' tile class='mx-3'>
-                                    <v-img :src='album.avatar'></v-img>
-                                </v-avatar>
-                            </v-slide-item>
-                        </v-slide-group>
-                    </v-sheet>
-                    <!-- <v-text-field filled v-model='index'></v-text-field> -->
-                </v-card-actions>
-            </v-card>
-
-    </v-row>
-            <v-row>
-            <v-card width="70%">
-                <v-list>
+                    </v-window-item>
+                </v-window>
+                                <v-list>
                     <v-list-item dense v-for='(song,i) in album.songs' :key="i">
                         <span>{{song}}</span>
                         <v-spacer></v-spacer>
@@ -43,13 +30,14 @@
                 </v-list>
             </v-card>
 
-        </v-row>
+    </v-row>
 </v-container>
 </template>
 
 <script>
 export default {
     data: () => ({
+        window:0,
         index: 0,
         album: null,
         albums: [{
