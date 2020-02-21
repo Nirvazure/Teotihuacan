@@ -1,75 +1,74 @@
 <template>
-<v-container>
+  <v-container>
+    <v-carousel>
+      <v-carousel-item></v-carousel-item>
+    </v-carousel>
     <v-row>
-        <v-col cols='12' md="9">
-            <v-row>
-                <v-col>
-                    <v-card class='my-3'>
-                        <v-card-title>那年今日</v-card-title>
-                        <v-sheet height="80">
-
-                        </v-sheet>
-                    </v-card>
-                </v-col>
-                <v-col>
-                    <v-card class='my-3'>
-                        <v-card-title>那年今日</v-card-title>
-                        <v-sheet height="80">
-
-                        </v-sheet>
-                    </v-card>
-                </v-col>
-            </v-row>
-            <v-card>
-                <v-card-title>Schedule</v-card-title>
-                <v-sheet height="400">
-                    <v-calendar type="month" :events="events"></v-calendar>
-                </v-sheet>
+      <v-col cols="12" md="9">
+        <v-row>
+          <v-col>
+            <v-card class="my-3">
+              <v-card-title>那年今日</v-card-title>
+              <v-sheet height="80"></v-sheet>
             </v-card>
-        </v-col>
-        <v-col>
-            <v-card class='my-3'>
-                <v-card-title>Todos</v-card-title>
+          </v-col>
+          <v-col>
+            <v-card class="my-3">
+              <v-card-title>那年今日</v-card-title>
+              <v-sheet height="80"></v-sheet>
             </v-card>
-        </v-col>
+          </v-col>
+        </v-row>
+        <v-card>
+          <v-card-title>Schedule</v-card-title>
+          <v-sheet height="400">
+            <v-calendar type="month" :events="events"></v-calendar>
+          </v-sheet>
+        </v-card>
+      </v-col>
+      <v-col>
+        <v-card class="my-3">
+          <v-card-title>Todos</v-card-title>
+        </v-card>
+      </v-col>
     </v-row>
-</v-container>
+  </v-container>
 </template>
 
 <script>
 export default {
-    data: () => ({
-        events: [{
-                name: 'Vacation',
-                start: '2019-12-30',
-                end: '2020-01-02',
-            },
-            {
-                name: 'Meeting',
-                start: '2019-12-07',
-            },
-            {
-                name: '30th Birthday',
-                start: '2019-12-03',
-            },
-            {
-                name: 'New Year',
-                start: '2019-12-01',
-            },
-            {
-                name: 'Conference',
-                start: '2019-12-21',
-            },
-            {
-                name: 'Hackathon',
-                start: '2019-12-30',
-                end: '2019-12-01',
-            },
-        ],
-    })
-}
+  data: () => ({
+    events: [
+      {
+        name: "Vacation",
+        start: "2019-12-30",
+        end: "2020-01-02"
+      },
+      {
+        name: "Meeting",
+        start: "2019-12-07"
+      },
+      {
+        name: "30th Birthday",
+        start: "2019-12-03"
+      },
+      {
+        name: "New Year",
+        start: "2019-12-01"
+      },
+      {
+        name: "Conference",
+        start: "2019-12-21"
+      },
+      {
+        name: "Hackathon",
+        start: "2019-12-30",
+        end: "2019-12-01"
+      }
+    ]
+  })
+};
 </script>
 
 <style>
-
 </style>
