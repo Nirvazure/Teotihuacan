@@ -48,7 +48,10 @@
     </v-content>
     <v-footer app color="teal darken-1" dark>
       <v-btn text>
-        <v-icon class="ml-2">mdi-github-circle</v-icon>
+        <v-icon>mdi-github-circle</v-icon>
+      </v-btn>
+      <v-btn text>
+        <v-icon>mdi-douban</v-icon>
       </v-btn>
       <v-btn text>
         <v-icon>mdi-sina-weibo</v-icon>
