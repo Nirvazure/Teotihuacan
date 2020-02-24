@@ -52,7 +52,19 @@ export default {
           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
       },
       {
-        name: "中国足球漫画",
+        name: "PlaneBlock",
+        description: "",
+        avatar:
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
+      },
+      {
+        name: "乌托邦杂货店",
+        description: "",
+        avatar:
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
+      },
+      {
+        name: "ComiChat",
         description: "",
         avatar:
           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
@@ -64,13 +76,19 @@ export default {
           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
       },
       {
-        name: "中国足球漫画",
+        name: "好友FM",
         description: "",
         avatar:
           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
       },
       {
-        name: "中国足球漫画",
+        name: "旋律锁屏",
+        description: "",
+        avatar:
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
+      },
+      {
+        name: "iWeek",
         description: "",
         avatar:
           "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"

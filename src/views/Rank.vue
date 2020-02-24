@@ -1,15 +1,44 @@
 <template>
   <v-container>
+    <v-card class="text-center">
+      <v-avatar size="100" v-for="(badge, i) in badges" :key="i">
+        <v-img :src="badge"></v-img>
+      </v-avatar>
+    </v-card>
+
     <v-row>
       <v-col>
         <v-card color="yellow darken-1">
           <v-card-title>Anime</v-card-title>
           <v-card-content>
             <v-list>
-              <v-list-item v-for="(anime,i) in animes" :key="i">
-                <v-list-item-title>{{anime.name}}</v-list-item-title>
+              <v-list-item v-for="(anime, i) in animes" :key="i">
+                <v-list-item-title>{{ anime.name }}</v-list-item-title>
                 <v-rating
-                  :value="anime.rank/2"
+                  :value="anime.rank / 2"
+                  dense
+                  small
+                  :empty-icon="emptyIcon"
+                  :full-icon="fullIcon"
+                  :half-icon="halfIcon"
+                  :half-increments="halfIncrements"
+                  color="yellow darken-1"
+                  background-color="black"
+                ></v-rating>
+              </v-list-item>
+            </v-list>
+          </v-card-content>
+        </v-card>
+      </v-col>
+      <v-col>
+        <v-card color="yellow darken-1">
+          <v-card-title>Anime</v-card-title>
+          <v-card-content>
+            <v-list>
+              <v-list-item v-for="(anime, i) in animes" :key="i">
+                <v-list-item-title>{{ anime.name }}</v-list-item-title>
+                <v-rating
+                  :value="anime.rank / 2"
                   dense
                   small
                   :empty-icon="emptyIcon"
@@ -29,10 +58,10 @@
           <v-card-title>Movie</v-card-title>
           <v-card-content>
             <v-list>
-              <v-list-item v-for="(anime,i) in movies" :key="i">
-                <v-list-item-title>{{anime.name}}</v-list-item-title>
+              <v-list-item v-for="(anime, i) in movies" :key="i">
+                <v-list-item-title>{{ anime.name }}</v-list-item-title>
                 <v-rating
-                  :value="anime.rank/2"
+                  :value="anime.rank / 2"
                   dense
                   small
                   color="green darken-1"
@@ -48,10 +77,10 @@
           <v-card-title>Game</v-card-title>
           <v-card-content>
             <v-list>
-              <v-list-item v-for="(anime,i) in animes" :key="i">
-                <v-list-item-title>{{anime.name}}</v-list-item-title>
+              <v-list-item v-for="(anime, i) in animes" :key="i">
+                <v-list-item-title>{{ anime.name }}</v-list-item-title>
                 <v-rating
-                  :value="anime.rank/2"
+                  :value="anime.rank / 2"
                   dense
                   small
                   color="red darken-1"
@@ -73,6 +102,15 @@ export default {
     fullIcon: "mdi-heart",
     halfIcon: "mdi-heart-half-full",
     halfIncrements: false,
+    badges: [
+      require("@/assets/images/badges/1.png"),
+      require("@/assets/images/badges/2.png"),
+      require("@/assets/images/badges/3.png"),
+      require("@/assets/images/badges/4.png"),
+      require("@/assets/images/badges/5.png"),
+      require("@/assets/images/badges/6.png"),
+      require("@/assets/images/badges/7.png")
+    ],
     animes: [
       { name: "叛逆的鲁鲁修", rank: 10 },
       { name: "夏洛特", rank: 9 },
@@ -107,5 +145,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

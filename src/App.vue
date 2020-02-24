@@ -1,15 +1,26 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant>
-      <v-img @click="$router.push({path: `/`})" class="mx-3 my-3" :src="avatar"></v-img>
+      <v-img
+        @click="$router.push({ path: `/` })"
+        class="mx-3 my-3"
+        :src="avatar"
+      ></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
-          <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text)">
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            @click="routerChange(item.text)"
+          >
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title class="font-weight-bold" v-text="item.text"></v-list-item-title>
+              <v-list-item-title
+                class="font-weight-bold"
+                v-text="item.text"
+              ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -36,7 +47,7 @@
         <template v-slot:badge>0</template>
         <v-icon>mdi-bell</v-icon>
       </v-badge>
-      <v-btn icon @click="$router.push({path: `/toys`});">
+      <v-btn icon @click="$router.push({ path: `/toys` })">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
       <v-avatar tile @click="rightDrawer = !rightDrawer">
@@ -58,7 +69,7 @@
       </v-btn>
 
       <v-spacer></v-spacer>
-      <div>&copy; {{ new Date().getFullYear() }}</div>
+      <div>&copy; {{ new Date().getFullYear() }} Power By Nivrazure</div>
     </v-footer>
   </v-app>
 </template>
