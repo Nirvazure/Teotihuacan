@@ -3,11 +3,22 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
-import BaiduMap from "vue-baidu-map";
 
-Vue.use(BaiduMap, {
-  /* Visit http://lbsyun.baidu.com/apiconsole/key for details about app key. */
-  ak: "0Sh2kkt8N8DVyCI4pxzWg7HxQGGQ1l0S"
+import VueAMap from "vue-amap";
+Vue.use(VueAMap);
+VueAMap.initAMapApiLoader({
+  key: "ae89018204ac99112d78b4b8655e8aec",
+  plugins: [
+    "AMap.Autocomplete",
+    "AMap.PlaceSearch",
+    "AMap.Scale",
+    "AMap.OverView",
+    "AMap.ToolBar",
+    "AMap.MapType",
+    "AMap.PolyEditor",
+    "AMap.CircleEditor"
+  ],
+  v: "1.4.4"
 });
 
 Vue.config.productionTip = false;

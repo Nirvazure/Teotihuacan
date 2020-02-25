@@ -1,22 +1,27 @@
 <template>
   <v-container>
-    <h3>
-      本页面收录了
-      <countTo :endVal="idoles.length"></countTo>个人物
-    </h3>
     <v-row>
-      <v-slide-group class="pa-4">
-        <v-slide-item class="ma-4" v-for="(type, index) in types" :key="index">
-          <v-chip :color="type.name|type2Color" dark>
-            <v-avatar left class="white darken-2" font-color="balck" dark>1</v-avatar>
-            {{ type.name }}
-            <v-avatar right>
-              <v-icon>{{type.icon}}</v-icon>
-            </v-avatar>
-          </v-chip>
-        </v-slide-item>
-      </v-slide-group>
+      <v-col>
+        <v-slide-group class="d-flex justify-center">
+          <v-slide-item class="ma-4" v-for="(type, index) in types" :key="index">
+            <v-chip :color="type.name|type2Color" dark>
+              <v-avatar left class="white darken-2" font-color="balck" dark>1</v-avatar>
+              {{ type.name }}
+              <v-avatar right>
+                <v-icon>{{type.icon}}</v-icon>
+              </v-avatar>
+            </v-chip>
+          </v-slide-item>
+        </v-slide-group>
+      </v-col>
+      <v-col class="d-flex justify-end">
+        <blockquote class="blockquote">
+          本页面收录了
+          <countTo :endVal="idoles.length"></countTo>个人物
+        </blockquote>
+      </v-col>
     </v-row>
+
     <v-row>
       <v-col cols="12" md="3" v-for="(idole, i) in idoles" :key="i">
         <v-hover v-slot:default="{ hover }">
@@ -292,9 +297,9 @@ export default {
       if (v == "音乐") {
         return "teal lighten-3";
       } else if (v == "动漫") {
-        return "red";
+        return "deep-orange darken-1";
       } else if (v == "艺术") {
-        return "purple";
+        return "cyan";
       } else if (v == "足球") {
         return "indigo";
       } else {
