@@ -5,7 +5,7 @@
       <v-sheet>
         <v-slide-group>
           <v-slide-item v-for="(work,index) in works" :key="index" class="pa-4">
-            <v-img width="200" class="ma-4" aspect-ratio="1.8" :src="work.avatar"></v-img>
+            <v-img width="200" class="ma-4" aspect-ratio="1.8" :src="work"></v-img>
           </v-slide-item>
         </v-slide-group>
       </v-sheet>
@@ -45,26 +45,18 @@ export default {
       require("@/assets/images/sketches/sk (7).png")
     ],
     works: [
-      {
-        avatar:
-          "https://img.zcool.cn/community/01ec5d5a28d66aa801216e8de4f0f3.jpg@1280w_1l_2o_100sh.jpg"
-      },
-      {
-        avatar:
-          "https://img.zcool.cn/community/016cc35a28d66aa80120ba383a780f.jpg@1280w_1l_2o_100sh.jpg"
-      },
-      {
-        avatar:
-          "https://img.zcool.cn/community/01d8895a28d66da801216e8dc51755.jpg@1280w_1l_2o_100sh.jpg"
-      },
-      {
-        avatar:
-          "https://img.zcool.cn/community/01bfbc5a28d66da801216e8d892ef9.jpg@1280w_1l_2o_100sh.jpg"
-      },
-      {
-        avatar:
-          "https://img.zcool.cn/community/01cc3b5a28d66ea80120ba38dcb3af.jpg@1280w_1l_2o_100sh.jpg"
-      }
+      require("@/assets/images/sketches/yqy (1).jpg"),
+      require("@/assets/images/sketches/yqy (2).jpg"),
+      require("@/assets/images/sketches/yqy (3).jpg"),
+      require("@/assets/images/sketches/yqy (4).jpg"),
+      require("@/assets/images/sketches/yqy (5).jpg"),
+      require("@/assets/images/sketches/yqy (6).jpg"),
+      require("@/assets/images/sketches/yqy (11).jpg"),
+      require("@/assets/images/sketches/yqy (12).jpg"),
+      require("@/assets/images/sketches/yqy (13).jpg"),
+      require("@/assets/images/sketches/yqy (14).jpg"),
+      require("@/assets/images/sketches/yqy (15).jpg"),
+      require("@/assets/images/sketches/yqy (16).jpg")
     ],
     crafts: [
       {

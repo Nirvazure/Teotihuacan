@@ -6,6 +6,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    name: "index",
+    component: () => import("../views/Index.vue")
+  },
+  {
+    path: "/home",
     name: "home",
     component: () => import("../views/Home.vue")
   },
@@ -43,6 +48,16 @@ const routes = [
     path: "/dreammap",
     name: "map",
     component: () => import("../views/Map.vue")
+  },
+  {
+    path: "/game",
+    name: "game",
+    component: () => import("../views/Game.vue")
+  },
+  {
+    path: "/logs",
+    name: "logs",
+    component: () => import("../views/Logs.vue")
   }
 ];
 

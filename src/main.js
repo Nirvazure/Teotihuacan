@@ -4,6 +4,9 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 
+import animate from "animate.css";
+
+Vue.use(animate);
 import VueAMap from "vue-amap";
 Vue.use(VueAMap);
 VueAMap.initAMapApiLoader({

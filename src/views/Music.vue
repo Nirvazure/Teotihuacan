@@ -1,9 +1,18 @@
 <template>
   <v-container>
     <v-row>
+      <v-col cols="12" md="3" v-for="(album, i) in albums" :key="i">
+        <v-container>
+          <v-card class="animated bounceOutDown infinite delay-2s"">
+            <v-img :src="album.avatar"></v-img>
+          </v-card>
+        </v-container>
+      </v-col>
+    </v-row>
+    <v-row>
       <v-card width="100%">
         <v-window v-model="window" :show-arrows="true">
-          <v-window-item v-for="(album,i) in albums" :key="i">
+          <v-window-item v-for="(album, i) in albums" :key="i">
             <v-row>
               <v-col cols="4">
                 <v-avatar size="300" class="ma-5">
@@ -11,18 +20,22 @@
                 </v-avatar>
               </v-col>
               <v-col>
-                <h2 class="ma-2">{{album.name}}</h2>
+                <h2 class="ma-2">{{ album.name }}</h2>
                 <v-chip class="mr-4" small label color="teal" dark>民谣</v-chip>
-                <v-chip class="mr-4" small label color="primary" dark>90后</v-chip>
-                <v-chip class="mr-4" small label color="black" dark>夜晚</v-chip>
+                <v-chip class="mr-4" small label color="primary" dark
+                  >90后</v-chip
+                >
+                <v-chip class="mr-4" small label color="black" dark
+                  >夜晚</v-chip
+                >
                 <p class="my-4">西大街的夜晚</p>
               </v-col>
             </v-row>
           </v-window-item>
         </v-window>
         <v-list>
-          <v-list-item dense v-for="(song,i) in album.songs" :key="i">
-            <span>{{song}}</span>
+          <v-list-item dense v-for="(song, i) in album.songs" :key="i">
+            <span>{{ song }}</span>
             <v-spacer></v-spacer>
             <v-list-item-icon>
               <v-icon>mdi-wechat</v-icon>
@@ -30,15 +43,6 @@
           </v-list-item>
         </v-list>
       </v-card>
-    </v-row>
-    <v-row>
-      <v-col cols="12" md="3" v-for="(album,i) in albums" :key="i">
-        <v-container>
-          <v-card>
-            <v-img :src="album.avatar"></v-img>
-          </v-card>
-        </v-container>
-      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -105,5 +109,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

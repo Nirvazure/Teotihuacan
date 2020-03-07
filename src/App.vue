@@ -2,7 +2,7 @@
   <v-app>
     <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant>
       <v-img
-        @click="$router.push({ path: `/` })"
+        @click="$router.push({ path: `/home` })"
         class="mx-3 my-3"
         :src="avatar"
       ></v-img>
@@ -11,7 +11,7 @@
           <v-list-item
             v-for="(item, i) in items"
             :key="i"
-            @click="routerChange(item.text)"
+            @click="routerChange(item.text, i)"
           >
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
@@ -84,7 +84,7 @@ export default {
     item: 1,
     items: [
       {
-        text: "Toys",
+        text: "game",
         icon: "mdi-gamepad-square"
       },
       {
@@ -114,7 +114,7 @@ export default {
     ]
   }),
   methods: {
-    routerChange(routeName) {
+    routerChange(routeName, index) {
       //为啥是个这个符号
       this.$router.push({
         path: `/${routeName}`

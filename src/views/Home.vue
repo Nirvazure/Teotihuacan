@@ -14,7 +14,8 @@
         <v-card>
           <v-card-title>Schedule</v-card-title>
           <v-sheet height="400">
-            <v-calendar type="month" :events="events"></v-calendar>
+            <Calendar></Calendar>
+            <!-- <v-calendar type="month" :events="events"></v-calendar> -->
           </v-sheet>
         </v-card>
       </v-col>
@@ -30,10 +31,12 @@
 </template>
 
 <script>
+import Calendar from "@/components/Calendar";
 import Todos from "@/components/Todos";
 export default {
   components: {
-    Todos
+    Todos,
+    Calendar
   },
   data: () => ({
     slides: [
