@@ -5,7 +5,7 @@
 <script>
 import echarts from "echarts";
 import "echarts-liquidfill";
-require("echarts/theme/macarons"); // echarts theme
+// require("echarts/theme/macarons"); // echarts theme
 
 const animationDuration = 3000;
 

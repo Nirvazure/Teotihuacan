@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="12" md="3" v-for="(album, i) in albums" :key="i">
         <v-container>
-          <v-card class="animated bounceOutDown infinite delay-2s"">
+          <v-card class="animated bounceInDown delay-2s">
             <v-img :src="album.avatar"></v-img>
           </v-card>
         </v-container>
@@ -15,19 +15,18 @@
           <v-window-item v-for="(album, i) in albums" :key="i">
             <v-row>
               <v-col cols="4">
-                <v-avatar size="300" class="ma-5">
-                  <v-img class="ma-4" :src="album.avatar"></v-img>
+                <v-avatar
+                  size="300"
+                  v-bind:class="{ 'animated bounceInDown': isActive, 'ma-5': true }"
+                >
+                  <v-img class="ma-4" :src="album.avatar" @mouseenter="isActive=!isActive"></v-img>
                 </v-avatar>
               </v-col>
               <v-col>
                 <h2 class="ma-2">{{ album.name }}</h2>
                 <v-chip class="mr-4" small label color="teal" dark>民谣</v-chip>
-                <v-chip class="mr-4" small label color="primary" dark
-                  >90后</v-chip
-                >
-                <v-chip class="mr-4" small label color="black" dark
-                  >夜晚</v-chip
-                >
+                <v-chip class="mr-4" small label color="primary" dark>90后</v-chip>
+                <v-chip class="mr-4" small label color="black" dark>夜晚</v-chip>
                 <p class="my-4">西大街的夜晚</p>
               </v-col>
             </v-row>
@@ -52,6 +51,7 @@ export default {
   data: () => ({
     window: 0,
     index: 0,
+    isActive: false,
     album: null,
     albums: [
       {

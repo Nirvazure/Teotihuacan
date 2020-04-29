@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1 class="animated infinite bounce delay-2s">Example</h1>
     <MyChart></MyChart>
     <Rank></Rank>
     <v-tabs centered>
@@ -8,17 +7,8 @@
     </v-tabs>
     <v-container>
       <v-row align="center">
-        <v-item-group
-          v-model="window"
-          class="shrink mr-6"
-          mandatory
-          tag="v-flex"
-        >
-          <v-item
-            v-for="n in length"
-            :key="n"
-            v-slot:default="{ active, toggle }"
-          >
+        <v-item-group v-model="window" class="shrink mr-6" mandatory tag="v-flex">
+          <v-item v-for="n in length" :key="n" v-slot:default="{ active, toggle }">
             <div>
               <v-btn :input-value="active" icon @click="toggle">
                 <v-icon>mdi-record</v-icon>

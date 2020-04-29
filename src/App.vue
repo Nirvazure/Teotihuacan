@@ -1,26 +1,15 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant>
-      <v-img
-        @click="$router.push({ path: `/home` })"
-        class="mx-3 my-3"
-        :src="avatar"
-      ></v-img>
+      <v-img @click="$router.push({ path: `/home` })" class="mx-3 my-3" :src="avatar"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
-          <v-list-item
-            v-for="(item, i) in items"
-            :key="i"
-            @click="routerChange(item.text, i)"
-          >
+          <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text, i)">
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title
-                class="font-weight-bold"
-                v-text="item.text"
-              ></v-list-item-title>
+              <v-list-item-title class="font-weight-bold" v-text="item.text"></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
@@ -43,10 +32,20 @@
           label="Search"
         />
       </v-sheet>
-      <v-badge color="teal" overlap>
-        <template v-slot:badge>0</template>
-        <v-icon>mdi-bell</v-icon>
-      </v-badge>
+      <v-btn icon @click="handleFullScreen()">
+        <v-icon>mdi-fullscreen</v-icon>
+      </v-btn>
+      <v-menu offset-y :nudge-bottom="14">
+        <template v-slot:activator="{ on }">
+          <v-btn icon flat v-on="on">
+            <v-badge color="teal" overlap>
+              <span slot="badge">3</span>
+              <v-icon>mdi-bell</v-icon>
+            </v-badge>
+          </v-btn>
+        </template>
+        <Todos></Todos>
+      </v-menu>
       <v-btn icon @click="$router.push({ path: `/toys` })">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
@@ -57,7 +56,7 @@
     <v-content dark>
       <router-view></router-view>
     </v-content>
-    <v-footer app color="teal darken-1" dark>
+    <!-- <v-footer app color="teal darken-1" dark>
       <v-btn text>
         <v-icon>mdi-github-circle</v-icon>
       </v-btn>
@@ -70,12 +69,17 @@
 
       <v-spacer></v-spacer>
       <div>&copy; {{ new Date().getFullYear() }} Power By Nivrazure</div>
-    </v-footer>
+    </v-footer>-->
   </v-app>
 </template>
 
 <script>
+import Todos from "@/components/Todos";
+import Util from "@/util";
 export default {
+  components: {
+    Todos
+  },
   data: () => ({
     myImg: require("@/assets/background.jpg"),
     avatar: require("@/assets/avatar.jpg"),
@@ -110,10 +114,17 @@ export default {
       {
         text: "Rank",
         icon: "mdi-map"
+      },
+      {
+        text: "Love",
+        icon: "mdi-heart"
       }
     ]
   }),
   methods: {
+    handleFullScreen() {
+      Util.toggleFullScreen();
+    },
     routerChange(routeName, index) {
       //为啥是个这个符号
       this.$router.push({
