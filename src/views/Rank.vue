@@ -48,6 +48,7 @@ import Rank from "@/components/Rank";
 import games from "@/api/games";
 import books from "@/api/books";
 import animes from "@/api/animes";
+import movies from "@/api/movies";
 export default {
   components: { Rank, CardSlide },
   data: () => ({
@@ -66,17 +67,7 @@ export default {
       require("@/assets/images/badges/7.png")
     ],
     animes: animes,
-    movies: [
-      { name: "三傻大闹宝莱坞", rank: 10 },
-      { name: "辛德勒名单", rank: 9 },
-      { name: "窃听风暴", rank: 8 },
-      { name: "死亡笔记", rank: 10 },
-      { name: "火影忍者", rank: 9 },
-      { name: "足球小将", rank: 8 },
-      { name: "铁胆火车侠", rank: 10 },
-      { name: "四驱兄弟", rank: 9 },
-      { name: "哆啦A梦", rank: 8 }
-    ],
+    movies: movies,
     books: books,
     shows: [
       { name: "神话" },
