@@ -1,24 +1,24 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12" md="3" v-for="(album, i) in albums" :key="i">
-        <v-container>
-          <v-card class="animated bounceInDown delay-2s">
-            <v-img :src="album.avatar"></v-img>
-          </v-card>
-        </v-container>
-      </v-col>
-    </v-row>
+    <v-slide-group class="d-flex justify-center">
+      <v-slide-item
+        class="ma-4"
+        v-for="(album, i) in albums"
+        :key="i"
+        :class="{ 'animated bounceInDown': isActive, 'ma-5': true }"
+      >
+        <v-card class="animated bounceInDown delay-2s" @mouseenter="index=i">
+          <v-img :src="album.avatar" width="150"></v-img>
+        </v-card>
+      </v-slide-item>
+    </v-slide-group>
     <v-row>
       <v-card width="100%">
         <v-window v-model="window" :show-arrows="true">
           <v-window-item v-for="(album, i) in albums" :key="i">
             <v-row>
               <v-col cols="4">
-                <v-avatar
-                  size="300"
-                  v-bind:class="{ 'animated bounceInDown': isActive, 'ma-5': true }"
-                >
+                <v-avatar size="300">
                   <v-img class="ma-4" :src="album.avatar" @mouseenter="isActive=!isActive"></v-img>
                 </v-avatar>
               </v-col>

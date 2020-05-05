@@ -3,9 +3,7 @@
     <v-carousel delimiter-icon="mdi-minus" class="mb-4">
       <v-carousel-item v-for="(slide,i) in slides" :key="i">
         <v-img :src="slide" aspect-ratio="2.3">
-          <v-row class="fill-height" align="center" justify="center">
-            <div class="display-3">Slide</div>
-          </v-row>
+          <v-row class="fill-height" align="center" justify="center"></v-row>
         </v-img>
       </v-carousel-item>
     </v-carousel>
@@ -13,10 +11,6 @@
       <v-col cols="12" md="8">
         <v-card>
           <v-card-title>Schedule</v-card-title>
-          <v-sheet height="400">
-            <Calendar></Calendar>
-            <!-- <v-calendar type="month" :events="events"></v-calendar> -->
-          </v-sheet>
         </v-card>
       </v-col>
       <v-col cols="12" md="4">
@@ -31,12 +25,10 @@
 </template>
 
 <script>
-import Calendar from "@/components/Calendar";
 import Todos from "@/components/Todos";
 export default {
   components: {
-    Todos,
-    Calendar
+    Todos
   },
   data: () => ({
     slides: [

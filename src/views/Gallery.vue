@@ -1,25 +1,23 @@
 <template>
-  <v-container>
-    <v-card class="my-3">
-      <v-card-title>Gallery</v-card-title>
-      <v-sheet>
-        <v-slide-group>
-          <v-slide-item v-for="(work,index) in works" :key="index" class="pa-4">
-            <v-img width="200" class="ma-4" aspect-ratio="1.8" :src="work"></v-img>
-          </v-slide-item>
-        </v-slide-group>
-      </v-sheet>
-    </v-card>
-    <v-card class="my-3">
-      <v-card-title>Sketches</v-card-title>
-      <v-sheet>
-        <v-slide-group>
-          <v-slide-item v-for="(sketch,i) in sketches" :key="i" class="pa-4">
-            <v-img width="200" class="ma-4" aspect-ratio="1.5" :src="sketch"></v-img>
-          </v-slide-item>
-        </v-slide-group>
-      </v-sheet>
-    </v-card>
+  <div>
+    <v-slide-group>
+      <v-slide-item v-for="(work,index) in works" :key="index" class="pa-4">
+        <v-img width="300" class="ma-4" aspect-ratio="1.8" :src="work"></v-img>
+      </v-slide-item>
+    </v-slide-group>
+
+    <v-slide-group>
+      <v-slide-item v-for="(sketch,i) in sketches" :key="i" class="pa-4">
+        <v-img
+          width="300"
+          class="ma-4"
+          aspect-ratio="1.5"
+          :src="sketch"
+          @mouseenter="isActive = i"
+          v-bind:class="{ 'animated flip': isActive == i }"
+        ></v-img>
+      </v-slide-item>
+    </v-slide-group>
 
     <h2>Crafts</h2>
     <v-sheet>
@@ -29,12 +27,13 @@
         </v-slide-item>
       </v-slide-group>
     </v-sheet>
-  </v-container>
+  </div>
 </template>
 
 <script>
 export default {
   data: () => ({
+    isActive: null,
     sketches: [
       require("@/assets/images/sketches/sk (1).png"),
       require("@/assets/images/sketches/sk (2).png"),

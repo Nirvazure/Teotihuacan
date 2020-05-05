@@ -26,12 +26,12 @@
       <v-col cols="12" md="3" v-for="(idole, i) in idoles" :key="i">
         <v-hover v-slot:default="{ hover }">
           <v-card shaped :elevation="hover ? 12 : 2" :class="hover?'animated pulse':''">
-            <v-card-title>
+            <v-card-title class="font-black">
               {{ idole.name }}
               <v-spacer></v-spacer>
               <v-chip dark :color="idole.color">{{ idole.type }}</v-chip>
             </v-card-title>
-            <v-card-subtitle>
+            <v-card-subtitle class="font-weight-thin">
               <span>{{ idole.description }}</span>
             </v-card-subtitle>
             <v-img aspect-ratio="0.9" :src="idole.avatar" class="my-1"></v-img>

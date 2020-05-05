@@ -15,9 +15,6 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-navigation-drawer v-model="rightDrawer" app dark right mini-variant>
-      <v-img :src="avatar"></v-img>
-    </v-navigation-drawer>
     <v-app-bar app dark clipped-left>
       <v-app-bar-nav-icon @click="leftDrawer = !leftDrawer" />
       <v-toolbar-title>Teotihuacan</v-toolbar-title>
@@ -84,7 +81,6 @@ export default {
     myImg: require("@/assets/background.jpg"),
     avatar: require("@/assets/avatar.jpg"),
     leftDrawer: true,
-    rightDrawer: false,
     item: 1,
     items: [
       {
@@ -126,7 +122,6 @@ export default {
       Util.toggleFullScreen();
     },
     routerChange(routeName, index) {
-      //为啥是个这个符号
       this.$router.push({
         path: `/${routeName}`
       });

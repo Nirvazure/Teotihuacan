@@ -1,6 +1,5 @@
 <template>
   <div>
-    <MyChart></MyChart>
     <Rank></Rank>
     <v-tabs centered>
       <v-tab v-for="(blog, i) in blogs" :key="i">{{ blog.name }}</v-tab>
@@ -75,10 +74,9 @@
 </template>
 
 <script>
-import MyChart from "@/components/MyChart";
 import Rank from "@/components/Rank";
 export default {
-  components: { Rank, MyChart },
+  components: { Rank },
   data: () => ({
     length: 6,
     window: 0,

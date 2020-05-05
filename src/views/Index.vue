@@ -5,7 +5,7 @@
         align-self="center"
         class="animated zoomIn"
         v-bind:class="{ activeClass : isActive}"
-        @mouseover="addActive"
+        @mouseenter="addActive"
       >
         <v-avatar size="164" class="avatar">
           <v-img :src="avatar"></v-img>
