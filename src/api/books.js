@@ -17,4 +17,19 @@ export default [
     avatar: require("@/assets/images/books/6.jpg"),
     rank: 8,
   },
+  {
+    name: "诛仙",
+    avatar: require("@/assets/images/books/9.jpg"),
+    rank: 8,
+  },
+  {
+    name: "亮剑",
+    avatar: require("@/assets/images/books/8.jpg"),
+    rank: 8,
+  },
+  {
+    name: "匆匆那年",
+    avatar: require("@/assets/images/books/7.jpg"),
+    rank: 8,
+  },
 ];

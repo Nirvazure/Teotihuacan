@@ -1,7 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant>
-      <v-img @click="$router.push({ path: `/home` })" class="mx-3 my-3" :src="avatar"></v-img>
+    <v-navigation-drawer v-model="leftDrawer" app clipped right mini-variant dark>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
           <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text, i)">
@@ -15,9 +14,13 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app dark clipped-left>
-      <v-app-bar-nav-icon @click="leftDrawer = !leftDrawer" />
-      <v-toolbar-title>Teotihuacan</v-toolbar-title>
+    <v-app-bar app dark clipped-right>
+      <v-toolbar-title class="ml-0 pl-3">
+        <span class="hidden-sm-and-down">Teotihuacan</span>
+        <v-btn @click="$router.push({ path: `/home` })">
+          <v-icon>mdi-home</v-icon>
+        </v-btn>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-sheet max-width="500" class="ma-8">
         <v-text-field
@@ -46,27 +49,13 @@
       <v-btn icon @click="$router.push({ path: `/toys` })">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
-      <v-avatar tile @click="rightDrawer = !rightDrawer">
+      <v-avatar tile @click="leftDrawer = !leftDrawer">
         <v-img :src="avatar"></v-img>
       </v-avatar>
     </v-app-bar>
     <v-content dark>
       <router-view></router-view>
     </v-content>
-    <!-- <v-footer app color="teal darken-1" dark>
-      <v-btn text>
-        <v-icon>mdi-github-circle</v-icon>
-      </v-btn>
-      <v-btn text>
-        <v-icon>mdi-douban</v-icon>
-      </v-btn>
-      <v-btn text>
-        <v-icon>mdi-sina-weibo</v-icon>
-      </v-btn>
-
-      <v-spacer></v-spacer>
-      <div>&copy; {{ new Date().getFullYear() }} Power By Nivrazure</div>
-    </v-footer>-->
   </v-app>
 </template>
 
@@ -80,7 +69,7 @@ export default {
   data: () => ({
     myImg: require("@/assets/background.jpg"),
     avatar: require("@/assets/avatar.jpg"),
-    leftDrawer: true,
+    leftDrawer: false,
     item: 1,
     items: [
       {

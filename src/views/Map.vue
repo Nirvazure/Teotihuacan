@@ -1,84 +1,148 @@
 <template>
-  <div class="pa-2">
-    <v-row>
-      <v-col cols="12" md="9">
-        <!-- <v-sheet height="580"> -->
-        <div class="amap-page-container">
-          <el-amap-search-box
-            class="search-box"
-            :search-option="searchOption"
-            :on-search-result="onSearchResult"
-          ></el-amap-search-box>
-          <el-amap vid="amapDemo" :center="mapCenter" :zoom="12" class="amap-demo">
-            <el-amap-marker v-for="(marker,i) in markers" :key="i" :position="marker"></el-amap-marker>
-          </el-amap>
-        </div>
-        <!-- </v-sheet> -->
-      </v-col>
-      <v-col>
-        <v-sheet height="580">
-          <v-card>
-            <v-list>
-              <v-list-item></v-list-item>
-            </v-list>
-          </v-card>
-        </v-sheet>
-      </v-col>
-    </v-row>
-  </div>
+  <v-sheet height="680">
+    <baidu-map
+      class="map"
+      center="西安"
+      :scroll-wheel-zoom="true"
+      :mapStyle="mapStyle"
+      ><bm-geolocation
+        anchor="BMAP_ANCHOR_BOTTOM_RIGHT"
+        :showAddressBar="true"
+        :autoLocation="true"
+      ></bm-geolocation>
+      <bm-panorama></bm-panorama>
+      <bm-map-type
+        :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']"
+        anchor="BMAP_ANCHOR_TOP_LEFT"
+      ></bm-map-type
+    ></baidu-map>
+  </v-sheet>
 </template>
 <script>
 export default {
-  data: () => ({
-    markers: [
-      [121.59996, 31.197646],
-      [121.40018, 31.197622],
-      [121.69991, 31.207649]
-    ],
-    searchOption: {
-      city: "上海",
-      citylimit: true
-    },
-    mapCenter: [121.59996, 31.197646]
-  }),
-  methods: {
-    addMarker: function() {
-      let lng = 121.5 + Math.round(Math.random() * 1000) / 10000;
-      let lat = 31.197646 + Math.round(Math.random() * 500) / 10000;
-      this.markers.push([lng, lat]);
-    },
-    onSearchResult(pois) {
-      let latSum = 0;
-      let lngSum = 0;
-      if (pois.length > 0) {
-        pois.forEach(poi => {
-          let { lng, lat } = poi;
-          lngSum += lng;
-          latSum += lat;
-          this.markers.push([poi.lng, poi.lat]);
-        });
-        let center = {
-          lng: lngSum / pois.length,
-          lat: latSum / pois.length
-        };
-        this.mapCenter = [center.lng, center.lat];
-      }
-    }
-  }
+  data() {
+    return {
+      mapStyle: {
+        styleJson: [
+          {
+            featureType: "land",
+            elementType: "geometry",
+            stylers: {
+              color: "#212121",
+            },
+          },
+          {
+            featureType: "building",
+            elementType: "geometry",
+            stylers: {
+              color: "#2b2b2b",
+            },
+          },
+          {
+            featureType: "highway",
+            elementType: "all",
+            stylers: {
+              lightness: -42,
+              saturation: -91,
+            },
+          },
+          {
+            featureType: "arterial",
+            elementType: "geometry",
+            stylers: {
+              lightness: -77,
+              saturation: -94,
+            },
+          },
+          {
+            featureType: "green",
+            elementType: "geometry",
+            stylers: {
+              color: "#1b1b1b",
+            },
+          },
+          {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: {
+              color: "#181818",
+            },
+          },
+          {
+            featureType: "subway",
+            elementType: "geometry.stroke",
+            stylers: {
+              color: "#181818",
+            },
+          },
+          {
+            featureType: "railway",
+            elementType: "geometry",
+            stylers: {
+              lightness: -52,
+            },
+          },
+          {
+            featureType: "all",
+            elementType: "labels.text.stroke",
+            stylers: {
+              color: "#313131",
+            },
+          },
+          {
+            featureType: "all",
+            elementType: "labels.text.fill",
+            stylers: {
+              color: "#8b8787",
+            },
+          },
+          {
+            featureType: "manmade",
+            elementType: "geometry",
+            stylers: {
+              color: "#1b1b1b",
+            },
+          },
+          {
+            featureType: "local",
+            elementType: "geometry",
+            stylers: {
+              lightness: -75,
+              saturation: -91,
+            },
+          },
+          {
+            featureType: "subway",
+            elementType: "geometry",
+            stylers: {
+              lightness: -65,
+            },
+          },
+          {
+            featureType: "railway",
+            elementType: "all",
+            stylers: {
+              lightness: -40,
+            },
+          },
+          {
+            featureType: "boundary",
+            elementType: "geometry",
+            stylers: {
+              color: "#8b8787",
+              weight: "1",
+              lightness: -29,
+            },
+          },
+        ],
+      },
+    };
+  },
 };
 </script>
-
 <style>
-.amap-demo {
-  height: 300px;
-}
-
-.search-box {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-}
-.amap-page-container {
-  position: relative;
+.map {
+  width: 100%;
+  height: 100%;
 }
 </style>

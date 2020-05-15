@@ -3,12 +3,18 @@
     <v-row>
       <v-col>
         <v-slide-group class="d-flex justify-center">
-          <v-slide-item class="ma-4" v-for="(type, index) in types" :key="index">
-            <v-chip :color="type.name|type2Color" dark>
-              <v-avatar left class="white darken-2" font-color="balck" dark>1</v-avatar>
+          <v-slide-item
+            class="ma-4"
+            v-for="(type, index) in types"
+            :key="index"
+          >
+            <v-chip :color="type.name | type2Color" dark>
+              <v-avatar left class="white darken-2" font-color="balck" dark
+                >1</v-avatar
+              >
               {{ type.name }}
               <v-avatar right>
-                <v-icon>{{type.icon}}</v-icon>
+                <v-icon>{{ type.icon }}</v-icon>
               </v-avatar>
             </v-chip>
           </v-slide-item>
@@ -25,7 +31,11 @@
     <v-row>
       <v-col cols="12" md="3" v-for="(idole, i) in idoles" :key="i">
         <v-hover v-slot:default="{ hover }">
-          <v-card shaped :elevation="hover ? 12 : 2" :class="hover?'animated pulse':''">
+          <v-card
+            shaped
+            :elevation="hover ? 12 : 2"
+            :class="hover ? 'animated pulse' : ''"
+          >
             <v-card-title class="font-black">
               {{ idole.name }}
               <v-spacer></v-spacer>
@@ -37,7 +47,10 @@
             <v-img aspect-ratio="0.9" :src="idole.avatar" class="my-1"></v-img>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-progress-circular :color="idole.color" value="100"></v-progress-circular>
+              <v-progress-circular
+                :color="idole.color"
+                value="100"
+              ></v-progress-circular>
             </v-card-actions>
           </v-card>
         </v-hover>
@@ -51,7 +64,7 @@ import idoles from "@/api/idoles";
 import countTo from "vue-count-to";
 export default {
   components: {
-    countTo
+    countTo,
   },
   data: () => ({
     stadium: require("@/assets/stadium.png"),
@@ -60,10 +73,10 @@ export default {
       { name: "足球", icon: "mdi-soccer" },
       { name: "艺术", icon: "mdi-palette" },
       { name: "动漫", icon: "" },
-      { name: "虚构", icon: "mdi-account-circle" }
+      { name: "虚构", icon: "mdi-account-circle" },
       // { name: "音乐", icon: "" }
     ],
-    idoles: idoles
+    idoles: idoles,
   }),
   filters: {
     type2Color(v) {
@@ -78,8 +91,8 @@ export default {
       } else {
         return;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

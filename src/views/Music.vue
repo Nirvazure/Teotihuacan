@@ -1,16 +1,55 @@
 <template>
   <v-container>
     <v-slide-group class="d-flex justify-center">
-      <v-slide-item
-        class="ma-4"
-        v-for="(album, i) in albums"
-        :key="i"
-        :class="{ 'animated bounceInDown': isActive, 'ma-5': true }"
-      >
-        <v-card class="animated bounceInDown delay-2s" @mouseenter="index=i">
-          <v-img :src="album.avatar" width="150"></v-img>
+      <v-bottom-sheet inset>
+        <template v-slot:activator="{ on }">
+          <v-slide-item
+            class="ma-4"
+            v-for="(album, i) in albums"
+            :key="i"
+            :class="{ 'animated bounceInDown': isActive, 'ma-5': true }"
+          >
+            <v-card @mouseenter="index=i" v-on="on">
+              <v-img :src="album.avatar" width="150"></v-img>
+            </v-card>
+          </v-slide-item>
+        </template>
+        <v-card tile>
+          <v-progress-linear :value="50" class="my-0" height="3"></v-progress-linear>
+
+          <v-list>
+            <v-list-item>
+              <v-list-item-avatar>
+                <v-img :src="album.avatar"></v-img>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>The Walker</v-list-item-title>
+                <v-list-item-subtitle>Fitz & The Trantrums</v-list-item-subtitle>
+              </v-list-item-content>
+
+              <v-spacer></v-spacer>
+
+              <v-list-item-icon>
+                <v-btn icon>
+                  <v-icon>mdi-rewind</v-icon>
+                </v-btn>
+              </v-list-item-icon>
+
+              <v-list-item-icon :class="{ 'mx-5': $vuetify.breakpoint.mdAndUp }">
+                <v-btn icon>
+                  <v-icon>mdi-pause</v-icon>
+                </v-btn>
+              </v-list-item-icon>
+
+              <v-list-item-icon class="ml-0" :class="{ 'mr-3': $vuetify.breakpoint.mdAndUp }">
+                <v-btn icon>
+                  <v-icon>mdi-fast-forward</v-icon>
+                </v-btn>
+              </v-list-item-icon>
+            </v-list-item>
+          </v-list>
         </v-card>
-      </v-slide-item>
+      </v-bottom-sheet>
     </v-slide-group>
     <v-row>
       <v-card width="100%">

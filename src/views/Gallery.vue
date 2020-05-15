@@ -1,5 +1,16 @@
 <template>
   <div>
+    <v-list>
+      <v-list-item v-for="(task,i) in tasks" :key="i" class="teal" dark>
+        <v-list-item-icon>
+          <v-icon>mdi-wechat</v-icon>
+        </v-list-item-icon>
+        <v-list-item-title>{{task.name}}</v-list-item-title>
+        <v-list-item-action>
+          <v-progress-circular :value="task.current/task.target*100"></v-progress-circular>
+        </v-list-item-action>
+      </v-list-item>
+    </v-list>
     <v-slide-group>
       <v-slide-item v-for="(work,index) in works" :key="index" class="pa-4">
         <v-img width="300" class="ma-4" aspect-ratio="1.8" :src="work"></v-img>
@@ -34,6 +45,10 @@
 export default {
   data: () => ({
     isActive: null,
+    tasks: [
+      { name: "跑步", target: 8000, current: 9300 },
+      { name: "", target: 8000, current: 600 }
+    ],
     sketches: [
       require("@/assets/images/sketches/sk (1).png"),
       require("@/assets/images/sketches/sk (2).png"),
