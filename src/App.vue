@@ -103,6 +103,10 @@ export default {
       {
         text: "Love",
         icon: "mdi-heart"
+      },
+      {
+        text: "year",
+        icon: "mdi-heart"
       }
     ]
   }),

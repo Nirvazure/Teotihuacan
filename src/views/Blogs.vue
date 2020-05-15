@@ -1,23 +1,13 @@
 <template>
   <div>
-    <Rank></Rank>
     <v-tabs centered>
       <v-tab v-for="(blog, i) in blogs" :key="i">{{ blog.name }}</v-tab>
     </v-tabs>
     <v-container>
       <ThemeSettings :items="posts"></ThemeSettings>
       <v-row align="center">
-        <v-item-group
-          v-model="window"
-          class="shrink mr-6"
-          mandatory
-          tag="v-flex"
-        >
-          <v-item
-            v-for="n in length"
-            :key="n"
-            v-slot:default="{ active, toggle }"
-          >
+        <v-item-group v-model="window" class="shrink mr-6" mandatory tag="v-flex">
+          <v-item v-for="n in length" :key="n" v-slot:default="{ active, toggle }">
             <div>
               <v-btn :input-value="active" icon @click="toggle">
                 <v-icon>mdi-record</v-icon>
@@ -79,16 +69,15 @@
 </template>
 
 <script>
-import Rank from "@/components/Rank";
 import { getPost } from "@/api/post";
 import ThemeSettings from "@/components/widgets/card/PostListCard";
 export default {
   computed: {
     posts() {
       return getPost();
-    },
+    }
   },
-  components: { ThemeSettings, Rank },
+  components: { ThemeSettings },
   data: () => ({
     length: 6,
     window: 0,
@@ -98,8 +87,8 @@ export default {
       { name: "源物语" },
       { name: "410夜话" },
       { name: "设计圣经" },
-      { name: "时间的灰" },
-    ],
-  }),
+      { name: "时间的灰" }
+    ]
+  })
 };
 </script>

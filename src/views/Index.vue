@@ -11,7 +11,7 @@
           <v-img :src="avatar"></v-img>
         </v-avatar>
         <h3 class="display-2 font-weight-bold">Nirvazure</h3>
-        <h4 class="heading font-thin mb-7">enter my mind</h4>
+        <v-btn class="mt-3" dark color="teal" @click="$router.push({ path: `/home` })">enter my mind</v-btn>
       </v-col>
     </v-row>
   </v-parallax>
