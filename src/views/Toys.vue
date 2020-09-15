@@ -16,6 +16,9 @@
           </v-list-item-group>
         </v-list>
       </v-col>
+      <v-col>
+        <v-card></v-card>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -24,8 +27,8 @@
 import toys from "@/api/toys";
 export default {
   data: () => ({
-    toys: toys
-  })
+    toys: toys,
+  }),
 };
 </script>
 

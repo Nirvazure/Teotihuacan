@@ -8,7 +8,7 @@ export default [
   },
   {
     name: "Mindoney",
-    description: "",
+    description: "产品核心功能受众：大学生、种草爱好者扩展：和小红书、毒、YOHO定位：记账软件+心愿单（添加心愿，价格随着更改的价格而变化）扩展：心愿库社交（扩展功能）",
     type: "",
     title: "",
     avatar:
@@ -64,9 +64,9 @@ export default [
   },
   {
     name: "ComiChat",
-    description: "",
+    description: "系统每天给用户随机分配一幕，编写每章要有字数限制，每个故事最多20幕",
     type: "",
-    title: "",
+    title: "创造故事的连环画应用，来源于2-410的宿舍白板",
     avatar:
       "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
@@ -88,14 +88,6 @@ export default [
   },
   {
     name: "旋律锁屏",
-    description: "",
-    type: "",
-    title: "",
-    avatar:
-      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
-  },
-  {
-    name: "iWeek",
     description: "",
     type: "",
     title: "",

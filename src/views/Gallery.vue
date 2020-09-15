@@ -1,16 +1,5 @@
 <template>
   <div>
-    <v-list>
-      <v-list-item v-for="(task,i) in tasks" :key="i" class="teal" dark>
-        <v-list-item-icon>
-          <v-icon>mdi-wechat</v-icon>
-        </v-list-item-icon>
-        <v-list-item-title>{{task.name}}</v-list-item-title>
-        <v-list-item-action>
-          <v-progress-circular :value="task.current/task.target*100"></v-progress-circular>
-        </v-list-item-action>
-      </v-list-item>
-    </v-list>
     <v-slide-group>
       <v-slide-item v-for="(work,index) in works" :key="index" class="pa-4">
         <v-img width="300" class="ma-4" aspect-ratio="1.8" :src="work"></v-img>
@@ -45,10 +34,6 @@
 export default {
   data: () => ({
     isActive: null,
-    tasks: [
-      { name: "跑步", target: 8000, current: 9300 },
-      { name: "", target: 8000, current: 600 }
-    ],
     sketches: [
       require("@/assets/images/sketches/sk (1).png"),
       require("@/assets/images/sketches/sk (2).png"),
@@ -56,7 +41,7 @@ export default {
       require("@/assets/images/sketches/sk (4).png"),
       require("@/assets/images/sketches/sk (5).png"),
       require("@/assets/images/sketches/sk (6).png"),
-      require("@/assets/images/sketches/sk (7).png")
+      require("@/assets/images/sketches/sk (7).png"),
     ],
     works: [
       require("@/assets/images/sketches/yqy (1).jpg"),
@@ -70,29 +55,29 @@ export default {
       require("@/assets/images/sketches/yqy (13).jpg"),
       require("@/assets/images/sketches/yqy (14).jpg"),
       require("@/assets/images/sketches/yqy (15).jpg"),
-      require("@/assets/images/sketches/yqy (16).jpg")
+      require("@/assets/images/sketches/yqy (16).jpg"),
     ],
     crafts: [
       {
         avatar:
-          "http://imglf2.nosdn.127.net/img/WUVPa3ZyclFUbDdBbGJmemc4aE5RNGVmTm9uVXB1YzVXUmJaTEZSYkpPQzVuTjljUGgxQUtnPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2&text=wqkgTmlydmF6dXJlIC8gbmlydmF6dXJlLmxvZnRlci5jb20=&font=bXN5aA==&gravity=southwest&dissolve=30&fontsize=240&dx=8&dy=10&stripmeta=0"
+          "http://imglf2.nosdn.127.net/img/WUVPa3ZyclFUbDdBbGJmemc4aE5RNGVmTm9uVXB1YzVXUmJaTEZSYkpPQzVuTjljUGgxQUtnPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2&text=wqkgTmlydmF6dXJlIC8gbmlydmF6dXJlLmxvZnRlci5jb20=&font=bXN5aA==&gravity=southwest&dissolve=30&fontsize=240&dx=8&dy=10&stripmeta=0",
       },
       {
         avatar:
-          "http://imglf2.nosdn.127.net/img/WUVPa3ZyclFUbDdKVFltWThWK1Uyd0p1cmFsUnlYUHU2ekxKcW9GYVQ3WGUvTzNKa1FSYS9RPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2&text=wqkgTmlydmF6dXJlIC8gbmlydmF6dXJlLmxvZnRlci5jb20=&font=bXN5aA==&gravity=southwest&dissolve=30&fontsize=240&dx=8&dy=10&stripmeta=0"
+          "http://imglf2.nosdn.127.net/img/WUVPa3ZyclFUbDdKVFltWThWK1Uyd0p1cmFsUnlYUHU2ekxKcW9GYVQ3WGUvTzNKa1FSYS9RPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2&text=wqkgTmlydmF6dXJlIC8gbmlydmF6dXJlLmxvZnRlci5jb20=&font=bXN5aA==&gravity=southwest&dissolve=30&fontsize=240&dx=8&dy=10&stripmeta=0",
       },
       {
         avatar:
-          "http://imglf4.nosdn0.126.net/img/WUVPa3ZyclFUbDRuK1hLV1Y2c3hkTzJzdzJSRmdqc1NjMWF5WHRVckJoallpWmovd2tkM2JnPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg"
+          "http://imglf4.nosdn0.126.net/img/WUVPa3ZyclFUbDRuK1hLV1Y2c3hkTzJzdzJSRmdqc1NjMWF5WHRVckJoallpWmovd2tkM2JnPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg",
       },
       {
-        avatar: ""
+        avatar: "",
       },
       {
-        avatar: ""
-      }
-    ]
-  })
+        avatar: "",
+      },
+    ],
+  }),
 };
 </script>
 
