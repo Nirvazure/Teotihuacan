@@ -1,6 +1,12 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant dark>
+    <v-navigation-drawer v-model="leftDrawer" app dark>
+      <v-app-bar dark>
+        <v-toolbar-title>
+          <span class="hidden-sm-and-down">Nirvazure Darkrai</span>
+        </v-toolbar-title>
+      </v-app-bar>
+      <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
           <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text, i)">
@@ -14,7 +20,10 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app dark clipped-left>
+    <v-app-bar app dark>
+      <v-avatar tile @click="leftDrawer = !leftDrawer">
+        <v-img :src="avatar"></v-img>
+      </v-avatar>
       <v-toolbar-title class="ml-0 pl-3">
         <span class="hidden-sm-and-down">Teotihuacan</span>
         <v-btn @click="$router.push({ path: `/home` })">
@@ -49,9 +58,6 @@
       <v-btn icon @click="$router.push({ path: `/toys` })">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
-      <v-avatar tile @click="leftDrawer = !leftDrawer">
-        <v-img :src="avatar"></v-img>
-      </v-avatar>
     </v-app-bar>
     <v-content dark>
       <router-view></router-view>
