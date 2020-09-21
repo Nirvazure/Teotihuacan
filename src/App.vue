@@ -62,17 +62,6 @@
       <v-btn icon @click="$router.push({ path: `/toys` })">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
-      <v-menu offset-y :nudge-bottom="14">
-        <template v-slot:activator="{ on }">
-          <v-btn icon flat v-on="on">
-            <v-badge color="teal" overlap>
-              <span slot="badge">3</span>
-              <v-icon>mdi-music</v-icon>
-            </v-badge>
-          </v-btn>
-        </template>
-        <Music></Music>
-      </v-menu>
     </v-app-bar>
     <v-content dark>
       <router-view></router-view>
@@ -81,13 +70,11 @@
 </template>
 
 <script>
-import Music from "@/components/Music.vue";
 import Todos from "@/components/Todos";
 import Util from "@/util";
 export default {
   components: {
     Todos,
-    Music,
   },
   data: () => ({
     myImg: require("@/assets/background.jpg"),

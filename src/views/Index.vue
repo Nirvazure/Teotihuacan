@@ -7,7 +7,7 @@
         v-bind:class="{ activeClass : isActive}"
         @mouseenter="addActive"
       >
-        <v-avatar size="164" class="avatar">
+        <v-avatar size="150" class="avatar">
           <v-img :src="avatar"></v-img>
         </v-avatar>
         <h3 class="display-2 font-weight-bold">Nirvazure</h3>
