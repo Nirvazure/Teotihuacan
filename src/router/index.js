@@ -3,8 +3,7 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "index",
     component: () => import("../views/Index.vue"),
@@ -48,16 +47,6 @@ const routes = [
     path: "/dreammap",
     name: "map",
     component: () => import("../views/Map.vue"),
-  },
-  {
-    path: "/game",
-    name: "game",
-    component: () => import("../views/Game.vue"),
-  },
-  {
-    path: "/logs",
-    name: "logs",
-    component: () => import("../views/Logs.vue"),
   },
   {
     path: "/love",

@@ -22,7 +22,6 @@ import countTo from "vue-count-to";
 export default {
   components: { countTo },
   data: () => ({
-    exploreHeight: window.innerHeight,
     isActive: true,
     activeClass: "animated bounce infinate",
     errorClass: "animated rollIn infinate",
@@ -32,6 +31,11 @@ export default {
   methods: {
     addActive($event) {
       this.isActive = !this.isActive;
+    },
+  },
+  computed: {
+    exploreHeight() {
+      return window.innerHeight;
     },
   },
 };
