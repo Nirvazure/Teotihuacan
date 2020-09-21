@@ -79,10 +79,6 @@ export default {
     item: 1,
     items: [
       {
-        text: "game",
-        icon: "mdi-gamepad-square",
-      },
-      {
         text: "Idoles",
         icon: "mdi-account",
       },
@@ -104,7 +100,7 @@ export default {
       },
       {
         text: "Rank",
-        icon: "mdi-map",
+        icon: "mdi-gamepad-square",
       },
       {
         text: "Love",
