@@ -1,27 +1,20 @@
 <template>
-  <v-sheet height="680">
-    <baidu-map
-      class="map"
-      center="西安"
-      :scroll-wheel-zoom="true"
-      :mapStyle="mapStyle"
-      ><bm-geolocation
-        anchor="BMAP_ANCHOR_BOTTOM_RIGHT"
-        :showAddressBar="true"
-        :autoLocation="true"
-      ></bm-geolocation>
+  <v-sheet :height="exploreHeight">
+    <baidu-map class="map" center="西安" :scroll-wheel-zoom="true" :mapStyle="mapStyle">
+      <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
       <bm-panorama></bm-panorama>
       <bm-map-type
         :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']"
         anchor="BMAP_ANCHOR_TOP_LEFT"
-      ></bm-map-type
-    ></baidu-map>
+      ></bm-map-type>
+    </baidu-map>
   </v-sheet>
 </template>
 <script>
 export default {
   data() {
     return {
+      exploreHeight: window.innerHeight,
       mapStyle: {
         styleJson: [
           {

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="leftDrawer" app clipped right mini-variant dark>
+    <v-navigation-drawer v-model="leftDrawer" app clipped mini-variant dark>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
           <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text, i)">
@@ -14,7 +14,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app dark clipped-right>
+    <v-app-bar app dark clipped-left>
       <v-toolbar-title class="ml-0 pl-3">
         <span class="hidden-sm-and-down">Teotihuacan</span>
         <v-btn @click="$router.push({ path: `/home` })">
@@ -64,7 +64,7 @@ import Todos from "@/components/Todos";
 import Util from "@/util";
 export default {
   components: {
-    Todos
+    Todos,
   },
   data: () => ({
     myImg: require("@/assets/background.jpg"),
@@ -74,41 +74,41 @@ export default {
     items: [
       {
         text: "game",
-        icon: "mdi-gamepad-square"
+        icon: "mdi-gamepad-square",
       },
       {
         text: "Idoles",
-        icon: "mdi-account"
+        icon: "mdi-account",
       },
       {
         text: "Blogs",
-        icon: "mdi-soccer"
+        icon: "mdi-soccer",
       },
       {
         text: "Music",
-        icon: "mdi-music"
+        icon: "mdi-music",
       },
       {
         text: "Gallery",
-        icon: "mdi-palette"
+        icon: "mdi-palette",
       },
       {
         text: "DreamMap",
-        icon: "mdi-map"
+        icon: "mdi-map",
       },
       {
         text: "Rank",
-        icon: "mdi-map"
+        icon: "mdi-map",
       },
       {
         text: "Love",
-        icon: "mdi-heart"
+        icon: "mdi-heart",
       },
       {
         text: "year",
-        icon: "mdi-heart"
-      }
-    ]
+        icon: "mdi-heart",
+      },
+    ],
   }),
   methods: {
     handleFullScreen() {
@@ -116,9 +116,9 @@ export default {
     },
     routerChange(routeName, index) {
       this.$router.push({
-        path: `/${routeName}`
+        path: `/${routeName}`,
       });
-    }
-  }
+    },
+  },
 };
 </script>

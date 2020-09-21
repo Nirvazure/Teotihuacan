@@ -1,5 +1,5 @@
 <template>
-  <v-parallax class="text-center pa-0" height="700" dark :src="bgImg">
+  <v-parallax class="text-center pa-0" :height="exploreHeight" dark :src="bgImg">
     <v-row>
       <v-col
         align-self="center"
@@ -22,17 +22,18 @@ import countTo from "vue-count-to";
 export default {
   components: { countTo },
   data: () => ({
+    exploreHeight: window.innerHeight,
     isActive: true,
     activeClass: "animated bounce infinate",
     errorClass: "animated rollIn infinate",
     avatar: require("@/assets/avatar.jpg"),
-    bgImg: require("@/assets/background.jpg")
+    bgImg: require("@/assets/background.jpg"),
   }),
   methods: {
     addActive($event) {
       this.isActive = !this.isActive;
-    }
-  }
+    },
+  },
 };
 </script>
 
