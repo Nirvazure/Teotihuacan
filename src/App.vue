@@ -1,12 +1,16 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="leftDrawer" app dark>
-      <v-app-bar dark>
-        <v-toolbar-title>
-          <span class="hidden-sm-and-down">Nirvazure Darkrai</span>
-        </v-toolbar-title>
-      </v-app-bar>
-      <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"></v-img>
+      <v-list-item>
+        <v-list-item-avatar>
+          <img :src="myImg" />
+        </v-list-item-avatar>
+        <v-list-item-content>
+          <v-list-item-title>Nirvazure</v-list-item-title>
+          <v-list-item-subtitle>YQYMONs</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-img :aspect-ratio="16/9" :src="myImg"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
           <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text, i)">
@@ -58,6 +62,17 @@
       <v-btn icon @click="$router.push({ path: `/toys` })">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
+      <v-menu offset-y :nudge-bottom="14">
+        <template v-slot:activator="{ on }">
+          <v-btn icon flat v-on="on">
+            <v-badge color="teal" overlap>
+              <span slot="badge">3</span>
+              <v-icon>mdi-music</v-icon>
+            </v-badge>
+          </v-btn>
+        </template>
+        <Music></Music>
+      </v-menu>
     </v-app-bar>
     <v-content dark>
       <router-view></router-view>
@@ -66,11 +81,13 @@
 </template>
 
 <script>
+import Music from "@/components/Music.vue";
 import Todos from "@/components/Todos";
 import Util from "@/util";
 export default {
   components: {
     Todos,
+    Music,
   },
   data: () => ({
     myImg: require("@/assets/background.jpg"),
