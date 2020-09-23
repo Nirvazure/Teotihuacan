@@ -58,7 +58,7 @@
           <v-window v-model="window" :show-arrows="true">
             <div class="text-center">
               <v-window-item v-for="(album, i) in albums" :key="i">
-                <v-avatar size="300" class="mt-8">
+                <v-avatar size="300" class="mt-8 App-logo">
                   <v-img class="ma-4" :src="album.avatar" @mouseenter="isActive=!isActive"></v-img>
                 </v-avatar>
                 <h2 class="ma-2">{{ album.name }}</h2>
@@ -179,4 +179,22 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
