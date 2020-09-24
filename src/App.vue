@@ -1,6 +1,16 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="leftDrawer" app clipped right mini-variant dark>
+    <v-navigation-drawer v-model="leftDrawer" app dark>
+      <v-list-item>
+        <v-list-item-avatar>
+          <img :src="myImg" />
+        </v-list-item-avatar>
+        <v-list-item-content>
+          <v-list-item-title>Nirvazure</v-list-item-title>
+          <v-list-item-subtitle>YQYMONs</v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-img :aspect-ratio="16/9" :src="myImg"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
           <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text, i)">
@@ -14,7 +24,10 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app dark clipped-right>
+    <v-app-bar app dark>
+      <v-avatar tile @click="leftDrawer = !leftDrawer">
+        <v-img :src="avatar"></v-img>
+      </v-avatar>
       <v-toolbar-title class="ml-0 pl-3">
         <span class="hidden-sm-and-down">Teotihuacan</span>
         <v-btn @click="$router.push({ path: `/home` })">
@@ -49,9 +62,6 @@
       <v-btn icon @click="$router.push({ path: `/toys` })">
         <v-icon>mdi-apps</v-icon>
       </v-btn>
-      <v-avatar tile @click="leftDrawer = !leftDrawer">
-        <v-img :src="avatar"></v-img>
-      </v-avatar>
     </v-app-bar>
     <v-content dark>
       <router-view></router-view>
@@ -64,7 +74,7 @@ import Todos from "@/components/Todos";
 import Util from "@/util";
 export default {
   components: {
-    Todos
+    Todos,
   },
   data: () => ({
     myImg: require("@/assets/background.jpg"),
@@ -73,42 +83,38 @@ export default {
     item: 1,
     items: [
       {
-        text: "game",
-        icon: "mdi-gamepad-square"
-      },
-      {
         text: "Idoles",
-        icon: "mdi-account"
+        icon: "mdi-account",
       },
       {
         text: "Blogs",
-        icon: "mdi-soccer"
+        icon: "mdi-soccer",
       },
       {
         text: "Music",
-        icon: "mdi-music"
+        icon: "mdi-music",
       },
       {
         text: "Gallery",
-        icon: "mdi-palette"
+        icon: "mdi-palette",
       },
       {
         text: "DreamMap",
-        icon: "mdi-map"
+        icon: "mdi-map",
       },
       {
         text: "Rank",
-        icon: "mdi-map"
+        icon: "mdi-gamepad-square",
       },
       {
         text: "Love",
-        icon: "mdi-heart"
+        icon: "mdi-heart",
       },
       {
         text: "year",
-        icon: "mdi-heart"
-      }
-    ]
+        icon: "mdi-heart",
+      },
+    ],
   }),
   methods: {
     handleFullScreen() {
@@ -116,9 +122,9 @@ export default {
     },
     routerChange(routeName, index) {
       this.$router.push({
-        path: `/${routeName}`
+        path: `/${routeName}`,
       });
-    }
-  }
+    },
+  },
 };
 </script>

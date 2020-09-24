@@ -1,5 +1,5 @@
 <template>
-  <v-parallax class="text-center pa-0" height="700" dark :src="bgImg">
+  <v-parallax class="text-center pa-0" :height="exploreHeight" dark :src="bgImg">
     <v-row>
       <v-col
         align-self="center"
@@ -7,7 +7,7 @@
         v-bind:class="{ activeClass : isActive}"
         @mouseenter="addActive"
       >
-        <v-avatar size="164" class="avatar">
+        <v-avatar size="150" class="avatar">
           <v-img :src="avatar"></v-img>
         </v-avatar>
         <h3 class="display-2 font-weight-bold">Nirvazure</h3>
@@ -26,13 +26,18 @@ export default {
     activeClass: "animated bounce infinate",
     errorClass: "animated rollIn infinate",
     avatar: require("@/assets/avatar.jpg"),
-    bgImg: require("@/assets/background.jpg")
+    bgImg: require("@/assets/background.jpg"),
   }),
   methods: {
     addActive($event) {
       this.isActive = !this.isActive;
-    }
-  }
+    },
+  },
+  computed: {
+    exploreHeight() {
+      return window.innerHeight;
+    },
+  },
 };
 </script>
 
