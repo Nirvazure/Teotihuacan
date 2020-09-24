@@ -27,21 +27,10 @@
           <v-container>
             <v-row>
               <v-col class="ml-5">
-                <v-progress-circular
-                  width="20"
-                  size="200"
-                  :value="70"
-                  color="blue-grey"
-                ></v-progress-circular>
+                <v-progress-circular width="20" size="200" :value="70" color="blue-grey"></v-progress-circular>
               </v-col>
               <v-col class="mr-5">
-                <v-progress-linear
-                  class="my-5"
-                  height="20"
-                  color="light-blue"
-                  value="10"
-                  striped
-                ></v-progress-linear>
+                <v-progress-linear class="my-5" height="20" color="light-blue" value="10" striped></v-progress-linear>
                 <v-progress-linear
                   class="my-5"
                   height="20"
@@ -49,20 +38,8 @@
                   value="20"
                   striped
                 ></v-progress-linear>
-                <v-progress-linear
-                  class="my-5"
-                  height="20"
-                  value="45"
-                  striped
-                  color="lime"
-                ></v-progress-linear>
-                <v-progress-linear
-                  class="my-5"
-                  height="20"
-                  value="60"
-                  striped
-                  color="deep-orange"
-                ></v-progress-linear>
+                <v-progress-linear class="my-5" height="20" value="45" striped color="lime"></v-progress-linear>
+                <v-progress-linear class="my-5" height="20" value="60" striped color="deep-orange"></v-progress-linear>
               </v-col>
             </v-row>
           </v-container>
