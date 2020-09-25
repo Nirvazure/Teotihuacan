@@ -71,7 +71,7 @@
               <v-window-item v-for="(album, i) in albums" :key="i">
                 <v-avatar size="300" class="mt-8">
                   <v-img
-                    class="ma-4"
+                    class="ma-4 App-logo"
                     :src="album.avatar"
                     @mouseenter="isActive = !isActive"
                   ></v-img>
