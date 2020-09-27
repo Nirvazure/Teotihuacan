@@ -1,15 +1,17 @@
 <template>
   <div>
     <v-slide-group>
-      <v-slide-item v-for="(work,index) in works" :key="index" class="pa-4">
+      <v-slide-item v-for="(work, index) in works" :key="index" class="pa-4">
         <v-card class="ma-4">
-          <v-img width="350" :aspect-ratio="16/9" :src="work"></v-img>
+          <v-img width="350" :aspect-ratio="16 / 9" :src="work"></v-img>
           <v-list-item class="mb-0">
             <v-list-item-avatar size="30">
               <v-img :src="work"></v-img>
             </v-list-item-avatar>
             <v-list-item-content>
-              <v-list-item-title class="font-weight-medium">Nirvazure</v-list-item-title>
+              <v-list-item-title class="font-weight-medium"
+                >Nirvazure</v-list-item-title
+              >
               <v-list-item-subtitle>12 days ago</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
@@ -23,11 +25,11 @@
     </v-slide-group>
 
     <v-slide-group>
-      <v-slide-item v-for="(sketch,i) in sketches" :key="i" class="pa-4">
+      <v-slide-item v-for="(sketch, i) in sketches" :key="i" class="pa-4">
         <v-card
           class="ma-4"
           @mouseenter="isActive = i"
-          v-bind:class="{ 'animated bounce': isActive == i }"
+          v-bind:class="{ 'animated jello': isActive == i }"
         >
           <v-img width="350" aspect-ratio="1.8" :src="sketch"></v-img>
           <v-list-item class="mb-0">
@@ -35,7 +37,9 @@
               <v-img :src="work"></v-img>
             </v-list-item-avatar>
             <v-list-item-content>
-              <v-list-item-title class="font-weight-medium">Nirvazure</v-list-item-title>
+              <v-list-item-title class="font-weight-medium"
+                >Nirvazure</v-list-item-title
+              >
               <v-list-item-subtitle>12 days ago</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
@@ -46,7 +50,7 @@
     <h2>Crafts</h2>
     <v-sheet>
       <v-slide-group>
-        <v-slide-item v-for="(work,index) in crafts" :key="index" class="pa-4">
+        <v-slide-item v-for="(work, index) in crafts" :key="index" class="pa-4">
           <v-img class="ma-4" aspect-ratio="1.5" :src="work"></v-img>
         </v-slide-item>
       </v-slide-group>
