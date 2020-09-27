@@ -10,24 +10,35 @@
           <v-list-item-subtitle>YQYMONs</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <v-img :aspect-ratio="16/9" :src="myImg"></v-img>
+      <v-img :aspect-ratio="16 / 9" :src="myImg"></v-img>
       <v-list>
         <v-list-item-group v-model="item" color="teal">
-          <v-list-item v-for="(item, i) in items" :key="i" @click="routerChange(item.text, i)">
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            @click="routerChange(item.text, i)"
+          >
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title class="font-weight-bold" v-text="item.text"></v-list-item-title>
+              <v-list-item-title
+                class="font-weight-bold"
+                v-text="item.text"
+              ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app dark>
-      <v-avatar tile @click="leftDrawer = !leftDrawer">
-        <v-img :src="avatar"></v-img>
-      </v-avatar>
+      <v-btn @click="leftDrawer = !leftDrawer" icon flat>
+        <v-icon>{{
+          leftDrawer
+            ? "mdi-format-indent-decrease"
+            : "mdi-format-indent-increase"
+        }}</v-icon>
+      </v-btn>
       <v-toolbar-title class="ml-0 pl-3">
         <span class="hidden-sm-and-down">Teotihuacan</span>
         <v-btn @click="$router.push({ path: `/home` })">
