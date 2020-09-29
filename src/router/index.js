@@ -58,6 +58,11 @@ const routes = [{
     name: "year",
     component: () => import("../views/Year"),
   },
+  {
+    path: "/servant",
+    name: "slave",
+    component: () => import("../views/Slave"),
+  },
 ];
 
 const router = new VueRouter({

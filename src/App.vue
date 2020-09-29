@@ -125,6 +125,10 @@ export default {
         text: "year",
         icon: "mdi-heart",
       },
+      {
+        text: "servant",
+        icon: "mdi-heart",
+      },
     ],
   }),
   methods: {

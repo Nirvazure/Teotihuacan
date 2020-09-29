@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <h1>年度总结</h1>
-    <span>{{tarYear}}</span>
+    <span>{{ tarYear }}</span>
   </v-container>
 </template>
 
@@ -9,15 +9,15 @@
 import years from "@/api/yearMemo";
 export default {
   data: () => ({
-    year: 0
+    year: 0,
   }),
   computed: {
     tarYear: () => {
       return years;
       // console.log(years[this.year]);
       // return years[this.year];
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -4,25 +4,19 @@
       <v-card
         class="mx-4"
         @mouseenter="isActive = i"
+        width="200"
         v-bind:class="{ 'animated shake': isActive == i }"
       >
-        <v-card-title>
-          {{ item.name }}
-          <v-spacer></v-spacer>
-          <v-chip label color="yellow">{{ i + 1 }}</v-chip>
-        </v-card-title>
-        <v-card-subtitle>{{ item.description }}</v-card-subtitle>
-        <v-img min-width="200" aspect-ratio="1" :src="item.avatar"></v-img>
-        <v-card-actions>
-          <v-chip :color="item.type | type2Color" dark>{{ item.type }}</v-chip>
-          <v-spacer></v-spacer>
-          <v-progress-circular
-            :text="item.rank"
-            :value="item.rank * 10"
-            width="5"
-            :color="item.type | type2Color"
-          ></v-progress-circular>
-        </v-card-actions>
+        <v-img width="100%" aspect-ratio="0.9" :src="item.avatar">
+          <v-card-title>
+            <v-chip :color="item.type | type2Color" dark>{{
+              item.type
+            }}</v-chip>
+            <v-spacer></v-spacer>
+            <v-chip label color="yellow">{{ i + 1 }}</v-chip>
+          </v-card-title>
+        </v-img>
+        <v-card-subtitle>{{ item.name }}{{ item.description }}</v-card-subtitle>
       </v-card>
     </v-slide-item>
   </v-slide-group>
