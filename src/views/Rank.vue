@@ -15,7 +15,7 @@
           </v-col>
         </v-row>
       </v-img>
-      <v-tabs>
+      <v-tabs align-with-title>
         <v-tab key="games">Games</v-tab>
         <v-tab key="books">Books</v-tab>
         <v-tab key="animes">Animes</v-tab>
@@ -39,13 +39,12 @@
 
 <script>
 import CardSlide from "@/components/CardSlide";
-import Rank from "@/components/Rank";
 import games from "@/api/games";
 import books from "@/api/books";
 import animes from "@/api/animes";
 import movies from "@/api/movies";
 export default {
-  components: { Rank, CardSlide },
+  components: { CardSlide },
   data: () => ({
     clicked: 0,
     animes: animes,
