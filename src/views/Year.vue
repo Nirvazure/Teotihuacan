@@ -23,11 +23,13 @@
           >
         </template>
         <v-container>
+          <v-divider></v-divider>
           <v-row>
             <v-col v-for="(memo, index) in year.memos" :key="index">
               <v-img :aspect-ratio="16 / 9" :src="memo"></v-img>
             </v-col>
           </v-row>
+          <v-divider></v-divider>
         </v-container>
       </v-timeline-item>
     </v-timeline>
