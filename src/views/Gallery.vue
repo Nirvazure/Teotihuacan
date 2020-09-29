@@ -25,7 +25,11 @@
     </v-slide-group>
 
     <v-slide-group>
-      <v-slide-item v-for="(sketch, i) in sketches" :key="i" class="pa-4">
+      <v-slide-item
+        v-for="(sketch, i) in sketches"
+        :key="i"
+        v-bind:class="{ 'text-right': i % 2 == 0 }"
+      >
         <v-card
           class="ma-4"
           @mouseenter="isActive = i"
