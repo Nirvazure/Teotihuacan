@@ -12,7 +12,15 @@
         </template>
         <template v-slot:opposite>
           <p class="display-2">{{ year.time }}</p>
-          <span class="font-weight-thin">{{ year.description }}</span>
+          <p class="font-weight-thin">{{ year.description }}</p>
+          <v-chip
+            class="mx-2"
+            v-for="(keyword, i) in year.keywords"
+            :key="i"
+            color="teal"
+            dark
+            >{{ keyword }}</v-chip
+          >
         </template>
         <v-container>
           <v-row>
