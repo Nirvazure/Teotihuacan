@@ -1,0 +1,52 @@
+<template>
+  <v-container>
+    <v-row>
+      <v-col cols="12" md="3">
+        <v-card dark>
+          <v-card-title>Tasks</v-card-title>
+          <v-list light class="mx-2">
+            <v-list-item
+              v-for="(video, i) in videos"
+              :key="i"
+              @click="index = i"
+              >Video {{ i }}</v-list-item
+            >
+          </v-list>
+          <v-card-actions></v-card-actions>
+        </v-card>
+      </v-col>
+      <v-col>
+        <v-sheet width="1200" height="675">
+          <video
+            width="100%"
+            height="100%"
+            :src="video"
+            controls
+            autoplay
+          ></video>
+        </v-sheet>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    index: 1,
+    videos: [
+      require("@/assets/vlogs/vol (1).mp4"),
+      require("@/assets/vlogs/vol (2).mp4"),
+      require("@/assets/vlogs/vol (3).mp4"),
+    ],
+  }),
+  computed: {
+    video() {
+      return this.videos[this.index];
+    },
+  },
+};
+</script>
+
+<style>
+</style>

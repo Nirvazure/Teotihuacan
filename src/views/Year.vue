@@ -15,6 +15,7 @@
           <p class="font-weight-thin">{{ year.description }}</p>
           <v-chip
             class="mx-2"
+            label
             v-for="(keyword, i) in year.keywords"
             :key="i"
             color="teal"

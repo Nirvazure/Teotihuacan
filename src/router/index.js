@@ -3,7 +3,8 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-const routes = [{
+const routes = [
+  {
     path: "/",
     name: "index",
     component: () => import("../views/Index.vue"),
@@ -59,9 +60,9 @@ const routes = [{
     component: () => import("../views/Year"),
   },
   {
-    path: "/servant",
-    name: "slave",
-    component: () => import("../views/Slave"),
+    path: "/vlog",
+    name: "vlog",
+    component: () => import("../views/Vlog"),
   },
 ];
 

@@ -126,7 +126,7 @@ export default {
         icon: "mdi-heart",
       },
       {
-        text: "servant",
+        text: "vlog",
         icon: "mdi-heart",
       },
     ],
