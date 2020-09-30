@@ -146,6 +146,7 @@ export default {
 
 <style scoped>
 .font-Forte {
+  font-size: 32px;
   font-family: "Forte";
 }
 </style>

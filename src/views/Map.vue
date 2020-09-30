@@ -1,8 +1,22 @@
 <template>
   <v-sheet :height="exploreHeight">
-    <baidu-map class="map" center="西安" :scroll-wheel-zoom="true" :mapStyle="mapStyle">
-      <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
+    <baidu-map
+      class="map"
+      center="西安"
+      :scroll-wheel-zoom="true"
+      :mapStyle="mapStyle"
+    >
+      <bm-geolocation
+        anchor="BMAP_ANCHOR_BOTTOM_RIGHT"
+        :showAddressBar="true"
+        :autoLocation="true"
+      ></bm-geolocation>
       <bm-panorama></bm-panorama>
+      <bm-geolocation
+        anchor="BMAP_ANCHOR_BOTTOM_RIGHT"
+        :showAddressBar="true"
+        :autoLocation="true"
+      ></bm-geolocation>
       <bm-map-type
         :map-types="['BMAP_NORMAL_MAP', 'BMAP_HYBRID_MAP']"
         anchor="BMAP_ANCHOR_TOP_LEFT"
