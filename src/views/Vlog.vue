@@ -4,7 +4,7 @@
       <v-col cols="12" md="3">
         <v-card dark color="teal">
           <v-card-title>Tasks</v-card-title>
-          <v-list light class="mx-2">
+          <v-list light class="mx-2" rounded>
             <v-list-item-group v-model="index" color="teal">
               <v-list-item
                 v-for="(video, i) in videos"

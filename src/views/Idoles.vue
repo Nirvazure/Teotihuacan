@@ -3,9 +3,15 @@
     <v-row>
       <v-col>
         <v-slide-group class="d-flex justify-center">
-          <v-slide-item class="ma-4" v-for="(type, index) in types" :key="index">
+          <v-slide-item
+            class="ma-4"
+            v-for="(type, index) in types"
+            :key="index"
+          >
             <v-chip :color="type.name | type2Color" dark>
-              <v-avatar left class="white darken-2" font-color="balck" dark>1</v-avatar>
+              <v-avatar left class="white darken-2" font-color="balck" dark
+                >1</v-avatar
+              >
               {{ type.name }}
               <v-avatar right>
                 <v-icon>{{ type.icon }}</v-icon>
@@ -25,7 +31,11 @@
     <v-row>
       <v-col cols="12" md="2" v-for="(idole, i) in idoles" :key="i">
         <v-hover v-slot:default="{ hover }">
-          <v-card shaped :elevation="hover ? 12 : 2" :class="hover ? 'animated pulse' : ''">
+          <v-card
+            shaped
+            :elevation="hover ? 12 : 2"
+            :class="hover ? 'animated pulse' : ''"
+          >
             <v-card-title class="font-black">
               {{ idole.name }}
               <v-spacer></v-spacer>
@@ -37,7 +47,10 @@
             <v-img aspect-ratio="0.9" :src="idole.avatar" class="my-1"></v-img>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-progress-circular :color="idole.color" value="100"></v-progress-circular>
+              <v-progress-circular
+                :color="idole.color"
+                value="100"
+              ></v-progress-circular>
             </v-card-actions>
           </v-card>
         </v-hover>
