@@ -40,7 +40,7 @@
         }}</v-icon>
       </v-btn>
       <v-toolbar-title class="ml-0 pl-3">
-        <span class="font">Teotihuacan</span>
+        <span class="font-Forte">Teotihuacan</span>
         <v-btn @click="$router.push({ path: `/home` })">
           <v-icon>mdi-home</v-icon>
         </v-btn>
@@ -145,7 +145,7 @@ export default {
 </script>
 
 <style scoped>
-.font {
+.font-Forte {
   font-family: "Forte";
 }
 </style>
