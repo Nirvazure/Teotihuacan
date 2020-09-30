@@ -24,7 +24,6 @@
           >
         </template>
         <v-container>
-          <v-divider></v-divider>
           <v-slide-group>
             <v-slide-item
               class="mx-3"
@@ -34,7 +33,6 @@
               <v-img :aspect-ratio="16 / 9" width="240" :src="memo"></v-img>
             </v-slide-item>
           </v-slide-group>
-          <v-divider></v-divider>
         </v-container>
       </v-timeline-item>
     </v-timeline>
