@@ -2,16 +2,19 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="3">
-        <v-card dark>
+        <v-card dark color="teal">
           <v-card-title>Tasks</v-card-title>
           <v-list light class="mx-2">
-            <v-list-item
-              v-for="(video, i) in videos"
-              :key="i"
-              @click="index = i"
-              >Video {{ i }}</v-list-item
-            >
-          </v-list>
+            <v-list-item-group v-model="index" color="teal">
+              <v-list-item
+                v-for="(video, i) in videos"
+                :key="i"
+                @click="index = i"
+                >Video {{ i }}</v-list-item
+              >
+            </v-list-item-group></v-list
+          >
+
           <v-card-actions></v-card-actions>
         </v-card>
       </v-col>

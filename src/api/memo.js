@@ -1,8 +1,10 @@
-export default [
-  {
+export default [{
     time: "2020",
     description: "",
     memos: [
+      require("@/assets/images/memos/2020 (1).jpg"),
+      require("@/assets/images/memos/2020 (2).jpg"),
+      require("@/assets/images/memos/2020 (3).jpg"),
       require("@/assets/images/memos/2020 (1).jpg"),
       require("@/assets/images/memos/2020 (2).jpg"),
       require("@/assets/images/memos/2020 (3).jpg"),
@@ -14,6 +16,9 @@ export default [
     keywords: ["VLOG", "秋招"],
     movies: [],
     memos: [
+      require("@/assets/images/memos/2019 (4).jpg"),
+      require("@/assets/images/memos/2019 (2).jpg"),
+      require("@/assets/images/memos/2019 (3).jpg"),
       require("@/assets/images/memos/2019 (4).jpg"),
       require("@/assets/images/memos/2019 (2).jpg"),
       require("@/assets/images/memos/2019 (3).jpg"),

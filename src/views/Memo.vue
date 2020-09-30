@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-timeline large v-for="(year, i) in years" :key="i">
+    <v-timeline large v-for="(memo, i) in memos" :key="i">
       <v-timeline-item
         v-bind:class="{ 'text-right': i % 2 == 0 }"
         :left="i % 2 == 0"
@@ -11,12 +11,12 @@
           </v-avatar>
         </template>
         <template v-slot:opposite>
-          <p class="display-2">{{ year.time }}</p>
-          <p class="font-weight-thin">{{ year.description }}</p>
+          <p class="display-2">{{ memo.time }}</p>
+          <p class="font-weight-thin">{{ memo.description }}</p>
           <v-chip
             class="mx-2"
             label
-            v-for="(keyword, i) in year.keywords"
+            v-for="(keyword, i) in memo.keywords"
             :key="i"
             color="teal"
             dark
@@ -25,11 +25,15 @@
         </template>
         <v-container>
           <v-divider></v-divider>
-          <v-row>
-            <v-col v-for="(memo, index) in year.memos" :key="index">
-              <v-img :aspect-ratio="16 / 9" :src="memo"></v-img>
-            </v-col>
-          </v-row>
+          <v-slide-group>
+            <v-slide-item
+              class="mx-3"
+              v-for="(memo, index) in memo.memos"
+              :key="index"
+            >
+              <v-img :aspect-ratio="16 / 9" width="240" :src="memo"></v-img>
+            </v-slide-item>
+          </v-slide-group>
           <v-divider></v-divider>
         </v-container>
       </v-timeline-item>
@@ -38,12 +42,12 @@
 </template>
 
 <script>
-import years from "@/api/yearMemo";
+import memos from "@/api/memo";
 export default {
   data: () => ({
     year: 0,
     avatar: require("@/assets/avatar.jpg"),
-    years: years,
+    memos: memos,
   }),
 };
 </script>

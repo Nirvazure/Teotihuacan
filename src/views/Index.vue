@@ -23,8 +23,8 @@
           dark
           color="teal"
           @click="$router.push({ path: `/home` })"
-          >enter my mind</v-btn
-        >
+          ><vue-typer text="enter my mind"></vue-typer
+        ></v-btn>
       </v-col>
     </v-row>
   </v-parallax>
@@ -57,7 +57,7 @@ export default {
 
 <style>
 .vue-typer {
-  font-family: Copperplate, "Forte", fantasy;
+  font-family: Copperplate, "Consolas", fantasy;
   color: #fff;
 }
 

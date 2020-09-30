@@ -122,7 +122,7 @@ export default {
         icon: "mdi-heart",
       },
       {
-        text: "year",
+        text: "memo",
         icon: "mdi-heart",
       },
       {

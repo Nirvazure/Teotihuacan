@@ -6,10 +6,8 @@
           <v-col class="py-0">
             <v-list-item color="rgba(0, 0, 0, .4)" dark>
               <v-list-item-content>
-                <v-list-item-title class="title"
-                  >Heroine Anthem</v-list-item-title
-                >
-                <v-list-item-subtitle>爱与海的深情对唱</v-list-item-subtitle>
+                <span class="display-2">Heroine Anthem</span>
+                <span class="title">爱与海的深情对唱</span>
               </v-list-item-content>
             </v-list-item>
           </v-col>
