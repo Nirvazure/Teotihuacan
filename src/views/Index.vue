@@ -57,7 +57,7 @@ export default {
 
 <style>
 .vue-typer {
-  font-family: Copperplate, "Consolas", fantasy;
+  font-family: Copperplate, "Magneto", fantasy;
   color: #fff;
 }
 
