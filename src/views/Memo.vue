@@ -43,7 +43,6 @@
 import memos from "@/api/memo";
 export default {
   data: () => ({
-    year: 0,
     avatar: require("@/assets/avatar.jpg"),
     memos: memos,
   }),
