@@ -22,7 +22,7 @@ export default [{
   },
   {
     name: "DoraPocket",
-    description: "",
+    description: "人人都想要哆啦A梦",
     progress: 70,
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577350620440&di=8c3a87301b12e9e32f1dd9a965eafc24&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F94o3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2Fb21bb051f8198618a63dac154ced2e738bd4e62d.jpg",
     bgImg: require('@/assets/b3.jpg'),
@@ -33,7 +33,7 @@ export default [{
   },
   {
     name: "YQYMONs",
-    description: "",
+    description: "YQYMONs战队官网",
     progress: 70,
     avatar: "https://img.zcool.cn/community/01eca85ca73beea80121416862e3e9.jpg@260w_195h_1c_1e_1o_100sh.jpg",
     bgImg: require('@/assets/b3.jpg'),
@@ -44,7 +44,7 @@ export default [{
   },
   {
     name: "ArtMind",
-    description: "",
+    description: "AI+艺术鉴赏",
     progress: 70,
     labels: [{
       text: "APP",
@@ -54,7 +54,7 @@ export default [{
   },
   {
     name: "鬼谷夜话",
-    description: "2313",
+    description: "家庭电台节目",
     progress: 70,
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658",
     labels: [{
@@ -64,13 +64,21 @@ export default [{
   },
   {
     name: "PlaneBlock",
-    description: "",
+    description: "风靡初高中的厌学游戏",
     progress: 70,
+    labels: [{
+      text: "APP",
+      color: 'blue'
+    }],
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
   {
     name: "乌托邦杂货店",
-    description: "",
+    description: "虚拟城市社交",
+    labels: [{
+      text: "APP",
+      color: 'blue'
+    }],
     progress: 70,
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
@@ -78,36 +86,60 @@ export default [{
     name: "ComiChat",
     progress: 70,
     description: "创造故事的连环画应用，来源于2-410的宿舍白板",
+    labels: [{
+      text: "APP",
+      color: 'blue'
+    }],
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
   {
     name: "中国足球漫画",
     progress: 70,
-    description: "",
+    description: "属于每个人的足球梦",
+    labels: [{
+      text: "漫画",
+      color: 'yellow'
+    }],
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
   {
     name: "好友FM",
     progress: 70,
-    description: "",
+    labels: [{
+      text: "APP",
+      color: 'blue'
+    }],
+    description: "听听来自朋友的声音",
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
   {
     name: "旋律锁屏",
     progress: 70,
     description: "",
+    labels: [{
+      text: "APP",
+      color: 'blue'
+    }],
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
   {
     name: "iWeek",
     progress: 70,
-    description: "",
+    description: "记录你的每一周",
+    labels: [{
+      text: "WEB",
+      color: 'red'
+    }],
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   },
   {
     name: "王者之魂",
     progress: 70,
-    description: "",
+    description: "玉秦苑王者大电影",
+    labels: [{
+      text: "影视",
+      color: 'purple'
+    }],
     avatar: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577353253604&di=8e806bbed6835313eff3af208a052458&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F240171776485a7c35a09c7bd5fff4450884e76efc3a2-dyfvD6_fw658"
   }
 ];
