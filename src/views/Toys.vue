@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="2" v-for="(item, i) in toys" :key="i">
-        <v-card height="300" class="text-center ma-4" :img="item.bgImg">
+        <v-card min-height="300" class="text-center ma-4" :img="item.bgImg">
           <v-card-text class="mt-2">
             <v-avatar size="100">
               <v-img :src="item.avatar"></v-img>
@@ -26,6 +26,9 @@
               >{{ label.text }}</v-chip
             >
           </v-card-text>
+          <v-card-actions>
+            <v-progress-linear :value="item.progress"></v-progress-linear
+          ></v-card-actions>
         </v-card>
       </v-col>
     </v-row>
