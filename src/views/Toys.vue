@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" md="2" v-for="(item, i) in toys" :key="i">
-        <v-card height="400" class="pt-1 text-center" :img="item.bgImg">
+        <v-card height="300" class="text-center ma-4" :img="item.bgImg">
           <v-card-text class="mt-2">
             <v-avatar size="100">
               <v-img :src="item.avatar"></v-img>
@@ -25,17 +25,6 @@
               small
               >{{ label.text }}</v-chip
             >
-          </v-card-text>
-          <v-card-text>
-            <v-avatar size="30">
-              <v-img :src="avatar"></v-img>
-            </v-avatar>
-            <v-avatar size="30">
-              <v-img :src="avatar"></v-img>
-            </v-avatar>
-            <v-avatar size="30">
-              <v-img :src="avatar"></v-img>
-            </v-avatar>
           </v-card-text>
         </v-card>
       </v-col>
