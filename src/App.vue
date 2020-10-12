@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="leftDrawer" app dark>
       <v-list-item>
         <v-list-item-avatar>
-          <img :src="myImg" />
+          <img :src="avatar" />
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-title>Nirvazure</v-list-item-title>
@@ -11,7 +11,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-img :aspect-ratio="16 / 9" :src="myImg"></v-img>
-      <v-list>
+      <v-list shaped>
         <v-list-item-group v-model="item" color="teal">
           <v-list-item
             v-for="(item, i) in items"
