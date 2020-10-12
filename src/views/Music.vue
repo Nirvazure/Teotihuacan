@@ -140,7 +140,7 @@
 
 <script>
 import Aplayer from "vue-aplayer";
-import { albums } from "@/api/albums";
+import { albums } from "@/api/mock";
 export default {
   components: {
     Aplayer,
