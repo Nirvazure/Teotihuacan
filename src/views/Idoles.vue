@@ -95,4 +95,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.animate__animated.animate__pulse {
+  --animate-duration: 3s;
+}
+</style>

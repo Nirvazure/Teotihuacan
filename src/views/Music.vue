@@ -81,7 +81,16 @@
         </v-slide-group>
       </v-col>
       <v-col cols="12" md="3">
-        <v-list>
+        <aplayer
+          autoplay
+          :music="{
+            title: 'secret base~君がくれたもの~',
+            artist: 'Silent Siren',
+            src: 'https://moeplayer.b0.upaiyun.com/aplayer/secretbase.mp3',
+            pic: 'https://moeplayer.b0.upaiyun.com/aplayer/secretbase.jpg',
+          }"
+        />
+        <!-- <v-list>
           <v-list-item>
             <v-list-item-avatar>
               <v-img :src="album.avatar"></v-img>
@@ -114,13 +123,8 @@
               </v-btn>
             </v-list-item-icon>
           </v-list-item>
-        </v-list>
+        </v-list> -->
         <v-list>
-          <v-progress-linear
-            :value="50"
-            class="my-0"
-            height="3"
-          ></v-progress-linear>
           <v-list-item dense v-for="(song, i) in album.songs" :key="i">
             <span>{{ song }}</span>
             <v-spacer></v-spacer>
@@ -135,8 +139,12 @@
 </template>
 
 <script>
+import Aplayer from "vue-aplayer";
 import { albums } from "@/api/albums";
 export default {
+  components: {
+    Aplayer,
+  },
   data: () => ({
     window: 0,
     index: 0,
