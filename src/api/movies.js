@@ -1,7 +1,7 @@
-export default [
-  {
+export default [{
     name: "三傻大闹宝莱坞",
     avatar: require("@/assets/images/movies/1.jpg"),
+    type: '剧情',
     rank: 10,
   },
   {

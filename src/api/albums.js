@@ -1,7 +1,7 @@
 const albums = [{
         name: "黑白糖果盒",
         avatar: require("@/assets/images/albums/1.jpg"),
-        songs: ["贫嘴高中生幸福生活", "流川枫和苍井空"],
+        songs: ["FIFA Anthem", "Renaissance"],
     },
     {
         name: "Darkray",
@@ -16,7 +16,7 @@ const albums = [{
     {
         name: "Darkray",
         avatar: require("@/assets/images/albums/4.jpg"),
-        songs: ["Send it", "Desposito"],
+        songs: ["Don't turn off the light", "Desposito"],
     },
     {
         name: "Darkray",
