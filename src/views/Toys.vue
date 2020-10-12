@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import toys from "@/api/toys";
+import { toys } from "@/api/mock";
 export default {
   data: () => ({
     toys: toys,

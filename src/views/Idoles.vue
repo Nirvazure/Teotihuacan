@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import idoles from "@/api/idoles";
+import { idoles } from "@/api/mock";
 import countTo from "vue-count-to";
 export default {
   components: {
