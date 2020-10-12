@@ -33,8 +33,7 @@
         <v-hover v-slot:default="{ hover }">
           <v-card
             shaped
-            :elevation="hover ? 12 : 2"
-            :class="hover ? 'animated pulse' : ''"
+            :class="hover ? 'animate__animated animate__pulse' : ''"
           >
             <v-card-title class="font-black">
               {{ idole.name }}

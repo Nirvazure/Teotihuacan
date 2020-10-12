@@ -33,7 +33,7 @@
         <v-card
           class="ma-4"
           @mouseenter="isActive = i"
-          v-bind:class="{ 'animated jello': isActive == i }"
+          v-bind:class="{ 'animate__animated animate__bounce': isActive == i }"
         >
           <v-img width="350" aspect-ratio="1.8" :src="sketch"></v-img>
           <v-list-item class="mb-0">
