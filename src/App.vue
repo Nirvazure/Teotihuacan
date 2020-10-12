@@ -41,9 +41,6 @@
       </v-btn>
       <v-toolbar-title class="ml-0 pl-3">
         <span class="font-Forte">Teotihuacan</span>
-        <v-btn @click="$router.push({ path: `/home` })">
-          <v-icon>mdi-home</v-icon>
-        </v-btn>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-sheet max-width="500" class="ma-8">
@@ -70,8 +67,8 @@
         </template>
         <Todos></Todos>
       </v-menu>
-      <v-btn icon @click="$router.push({ path: `/toys` })">
-        <v-icon>mdi-apps</v-icon>
+      <v-btn icon @click="$router.push({ path: `/home` })">
+        <v-icon>mdi-home</v-icon>
       </v-btn>
     </v-app-bar>
     <v-content dark>
@@ -114,8 +111,12 @@ export default {
         icon: "mdi-map",
       },
       {
-        text: "Rank",
+        text: "Toys",
         icon: "mdi-gamepad-square",
+      },
+      {
+        text: "Rank",
+        icon: "mdi-seal",
       },
       {
         text: "Love",
@@ -123,11 +124,11 @@ export default {
       },
       {
         text: "memo",
-        icon: "mdi-heart",
+        icon: "mdi-timeline",
       },
       {
         text: "vlog",
-        icon: "mdi-heart",
+        icon: "mdi-video",
       },
     ],
   }),
