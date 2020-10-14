@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row width="70%">
       <v-col cols="12" md="8">
         <v-carousel delimiter-icon="mdi-minus" class="mb-4">
           <v-carousel-item v-for="(slide, i) in slides" :key="i">
@@ -16,10 +16,6 @@
       </v-col>
       <v-col cols="12" md="4">
         <Todos></Todos>
-        <v-card class="ma-3">
-          <v-card-title>那年今日</v-card-title>
-          <v-sheet height="80"></v-sheet>
-        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -37,34 +33,6 @@ export default {
       require("@/assets/bg2.jpg"),
       require("@/assets/bg3.jpg"),
       require("@/assets/bg4.jpg"),
-    ],
-    events: [
-      {
-        name: "Vacation",
-        start: "2019-12-30",
-        end: "2020-01-02",
-      },
-      {
-        name: "Meeting",
-        start: "2019-12-07",
-      },
-      {
-        name: "30th Birthday",
-        start: "2019-12-03",
-      },
-      {
-        name: "New Year",
-        start: "2019-12-01",
-      },
-      {
-        name: "Conference",
-        start: "2019-12-21",
-      },
-      {
-        name: "Hackathon",
-        start: "2019-12-30",
-        end: "2019-12-01",
-      },
     ],
   }),
 };

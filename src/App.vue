@@ -79,7 +79,7 @@
 
 <script>
 import Todos from "@/components/Todos";
-import Util from "@/util";
+import { toggleFullScreen } from "@/util";
 export default {
   components: {
     Todos,
@@ -134,7 +134,7 @@ export default {
   }),
   methods: {
     handleFullScreen() {
-      Util.toggleFullScreen();
+      toggleFullScreen();
     },
     routerChange(routeName, index) {
       this.$router.push({

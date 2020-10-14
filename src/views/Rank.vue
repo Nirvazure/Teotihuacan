@@ -1,15 +1,13 @@
 <template>
   <v-container>
     <v-img height="100%" :src="games[0].avatar" aspect-ratio="3.5">
-      <v-row align="end" class="fill-height">
-        <v-col class="py-0">
-          <v-list-item color="rgba(0, 0, 0, .4)" dark>
-            <v-list-item-content>
-              <span class="display-2">Heroine Anthem</span>
-              <span class="title">爱与海的深情对唱</span>
-            </v-list-item-content>
-          </v-list-item>
-        </v-col>
+      <v-row align="end" justify="start" class="fill-height">
+        <v-list-item dark class="ma-4">
+          <v-list-item-content>
+            <span class="display-2">Heroine Anthem</span>
+            <span class="title">爱与海的深情对唱</span>
+          </v-list-item-content>
+        </v-list-item>
       </v-row>
     </v-img>
     <v-tabs align-with-title>
@@ -43,19 +41,12 @@ import { games, books, animes, movies, shows } from "@/api/mock";
 export default {
   components: { CardSlide },
   data: () => ({
-    clicked: 0,
     animes: animes,
     movies: movies,
     books: books,
     shows: shows,
     games: games,
   }),
-
-  methods: {
-    changeTab(index) {
-      this.clicked = index;
-    },
-  },
 };
 </script>
 
