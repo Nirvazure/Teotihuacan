@@ -17,7 +17,7 @@
 - Love Talk 类似 QQ 的说说
 - Love timeline
 - Love Anniversary 纪念日
-- Love
+- Love Space 类似空间
 
 ## Project setup
 

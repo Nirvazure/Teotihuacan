@@ -80,7 +80,8 @@
           </v-bottom-sheet>
         </v-slide-group>
       </v-col>
-      <v-col cols="12" md="3">
+      <v-divider vertical></v-divider>
+      <v-col>
         <aplayer
           autoplay
           :music="{
