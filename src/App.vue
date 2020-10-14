@@ -1,17 +1,24 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="leftDrawer" app dark>
-      <v-list-item>
-        <v-list-item-avatar>
-          <img :src="avatar" />
-        </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-title>Nirvazure</v-list-item-title>
-          <v-list-item-subtitle>YQYMONs</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-img :aspect-ratio="16 / 9" :src="myImg"></v-img>
+    <v-navigation-drawer app dark :mini-variant="leftDrawer">
       <v-list shaped>
+        <v-list-item>
+          <v-list-item-avatar>
+            <v-img :src="avatar"></v-img>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title>Nirvazure</v-list-item-title>
+            <v-list-item-subtitle>YQYMONs</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-img
+          v-if="!leftDrawer"
+          :aspect-ratio="16 / 9"
+          :src="myImg"
+          width="100%"
+        ></v-img>
+
         <v-list-item-group v-model="item" color="teal">
           <v-list-item
             v-for="(item, i) in items"
