@@ -1,10 +1,13 @@
 <template>
   <v-container>
-    <v-row width="70%">
-      <v-col cols="12" md="8">
-        <v-carousel delimiter-icon="mdi-minus" class="mb-4">
+    <v-row>
+      <v-col cols="12" md="2">
+        <Todos></Todos>
+      </v-col>
+      <v-col>
+        <v-carousel delimiter-icon="mdi-minus">
           <v-carousel-item v-for="(slide, i) in slides" :key="i">
-            <v-img :src="slide" aspect-ratio="2.3">
+            <v-img :src="slide" :aspect-ratio="16 / 9">
               <v-row
                 class="fill-height"
                 align="center"
@@ -14,8 +17,10 @@
           </v-carousel-item>
         </v-carousel>
       </v-col>
-      <v-col cols="12" md="4">
-        <Todos></Todos>
+      <v-col cols="12" md="3">
+        <div height="200">
+          <v-calendar type="month"></v-calendar>
+        </div>
       </v-col>
     </v-row>
   </v-container>

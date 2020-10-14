@@ -11,6 +11,14 @@
 - 黑白糖果盒
 - 思维肖申克
 
+### love
+
+- Love Map
+- Love Talk 类似 QQ 的说说
+- Love timeline
+- Love Anniversary 纪念日
+- Love
+
 ## Project setup
 
 ```
