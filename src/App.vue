@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-navigation-drawer app dark :mini-variant="leftDrawer">
+    <v-navigation-drawer app dark :mini-variant="mini_variate" clipped>
       <v-list shaped>
-        <v-list-item>
+        <v-list-item :style="{ paddingLeft: '10px' }">
           <v-list-item-avatar>
             <v-img :src="avatar"></v-img>
           </v-list-item-avatar>
@@ -13,7 +13,8 @@
         </v-list-item>
 
         <v-img
-          v-if="!leftDrawer"
+          @click="$router.push({ path: `/` })"
+          v-if="!mini_variate"
           :aspect-ratio="16 / 9"
           :src="myImg"
           width="100%"
@@ -38,10 +39,10 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app dark>
-      <v-btn @click="leftDrawer = !leftDrawer" icon flat>
+    <v-app-bar app dark clipped-left>
+      <v-btn @click="mini_variate = !mini_variate" icon flat>
         <v-icon>{{
-          leftDrawer
+          mini_variate
             ? "mdi-format-indent-decrease"
             : "mdi-format-indent-increase"
         }}</v-icon>
@@ -94,7 +95,7 @@ export default {
   data: () => ({
     myImg: require("@/assets/background.jpg"),
     avatar: require("@/assets/avatar.jpg"),
-    leftDrawer: false,
+    mini_variate: true,
     item: 1,
     items: [
       {

@@ -1,22 +1,6 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="2">
-        <Todos></Todos>
-      </v-col>
-      <v-col>
-        <v-carousel delimiter-icon="mdi-minus">
-          <v-carousel-item v-for="(slide, i) in slides" :key="i">
-            <v-img :src="slide" :aspect-ratio="16 / 9">
-              <v-row
-                class="fill-height"
-                align="center"
-                justify="center"
-              ></v-row>
-            </v-img>
-          </v-carousel-item>
-        </v-carousel>
-      </v-col>
       <v-col cols="12" md="3">
         <v-card>
           <v-img
@@ -53,6 +37,22 @@
             </v-timeline>
           </v-card-text>
         </v-card>
+      </v-col>
+      <v-col>
+        <v-carousel delimiter-icon="mdi-minus">
+          <v-carousel-item v-for="(slide, i) in slides" :key="i">
+            <v-img :src="slide" :aspect-ratio="16 / 9">
+              <v-row
+                class="fill-height"
+                align="center"
+                justify="center"
+              ></v-row>
+            </v-img>
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
+      <v-col cols="12" md="3">
+        <Todos></Todos>
       </v-col>
     </v-row>
   </v-container>
