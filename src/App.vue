@@ -115,7 +115,7 @@ export default {
         icon: "mdi-palette",
       },
       {
-        text: "DreamMap",
+        text: "Map",
         icon: "mdi-map",
       },
       {

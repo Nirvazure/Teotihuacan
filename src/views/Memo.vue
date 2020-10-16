@@ -40,11 +40,11 @@
 </template>
 
 <script>
-import memos from "@/api/memo";
+import { timelineItems } from "@/api/memo";
 export default {
   data: () => ({
     avatar: require("@/assets/avatar.jpg"),
-    memos: memos,
+    memos: timelineItems,
   }),
 };
 </script>

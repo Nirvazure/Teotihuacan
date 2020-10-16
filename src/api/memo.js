@@ -1,4 +1,4 @@
-export default [{
+const timelineItems = [{
     time: "2020",
     description: "",
     memos: [
@@ -76,3 +76,25 @@ export default [{
     people: ["关嘉伟", "赵静"],
   },
 ];
+
+const memos = [{
+    time: '2006-01-22',
+    name: "科比81分",
+    content: "科比·布莱恩特在湖人对猛龙的比赛里全场得到了81分，这是NBA单场第二高的得分",
+  },
+  {
+    time: '2008-08-08',
+    name: "北京奥运会开幕",
+    content: "",
+  },
+  {
+    time: '2017-03-09',
+    name: "诺坎普奇迹",
+    content: "巴塞罗那主场6：1巴黎圣日尔曼",
+  },
+];
+
+export {
+  timelineItems,
+  memos
+}

@@ -44,7 +44,7 @@ const routes = [{
     component: () => import("@/views/Rank.vue"),
   },
   {
-    path: "/dreammap",
+    path: "/map",
     name: "map",
     component: () => import("@/views/Map.vue"),
   },
