@@ -42,11 +42,7 @@
         <v-carousel delimiter-icon="mdi-minus">
           <v-carousel-item v-for="(slide, i) in slides" :key="i">
             <v-img :src="slide" :aspect-ratio="16 / 9">
-              <v-row
-                class="fill-height"
-                align="center"
-                justify="center"
-              ></v-row>
+              <vue-particles color="#dedede"></vue-particles>
             </v-img>
           </v-carousel-item>
         </v-carousel>

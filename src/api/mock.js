@@ -530,8 +530,6 @@ const idoles = [{
     },
 ];
 
-
-
 export {
     albums,
     games,

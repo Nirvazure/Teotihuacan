@@ -73,7 +73,21 @@
             </v-badge>
           </v-btn>
         </template>
-        <Todos></Todos>
+
+        <v-list>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Some text</v-list-item-title>
+              <v-list-item-subtitle>Do sth</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-content>
+              <v-list-item-title>Some text23</v-list-item-title>
+              <v-list-item-subtitle>Do sth4</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
       </v-menu>
       <v-btn icon @click="$router.push({ path: `/home` })">
         <v-icon>mdi-home</v-icon>
@@ -86,12 +100,8 @@
 </template>
 
 <script>
-import Todos from "@/components/Todos";
 import { toggleFullScreen } from "@/util";
 export default {
-  components: {
-    Todos,
-  },
   data: () => ({
     myImg: require("@/assets/background.jpg"),
     avatar: require("@/assets/avatar.jpg"),

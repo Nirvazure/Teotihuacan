@@ -55,9 +55,6 @@ const timelineItems = [{
     description: "支付宝全年消费8400",
     dead: ["余光中"],
     archives: ["和小朋友关系越来越好"],
-    movies: [],
-    books: [],
-    places: [],
     memos: [
       require("@/assets/images/sketches/yqy (1).jpg"),
       require("@/assets/images/sketches/yqy (2).jpg"),
