@@ -4,6 +4,9 @@ import router from "@/router";
 import vuetify from "./plugins/vuetify";
 import VueParticles from 'vue-particles'
 
+import Bars from 'vuebars'
+Vue.use(Bars)
+
 import animate from "animate.css";
 Vue.use(animate);
 Vue.use(VueParticles)

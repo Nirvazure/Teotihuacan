@@ -82,6 +82,11 @@
       </v-col>
       <v-divider vertical></v-divider>
       <v-col>
+        <bars
+          :data="[1, 2, 5, 9, 5, 10, 3, 5, 2, 5, 1, 8, 2, 9, 0]"
+          :gradient="['#6fa8dc', '#42b983']"
+        >
+        </bars>
         <aplayer
           autoplay
           :music="{
