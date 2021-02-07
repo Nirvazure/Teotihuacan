@@ -1,54 +1,30 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="3">
-        <v-card>
-          <v-img
-            height="400px"
-            src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
-          >
-            <v-card-title class="white--text mt-8">
-              <v-avatar size="56">
-                <img
-                  src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
-                />
-              </v-avatar>
-              <p class="ml-3">John Doe</p>
-              <v-calendar class="mt-3"></v-calendar>
-            </v-card-title>
-          </v-img>
+      <v-col cols="12" sm="2">
+        <v-sheet rounded="lg" min-height="300">
+          <v-card>
+            <v-calendar class="mt-2"></v-calendar>
+          </v-card>
+        </v-sheet>
+      </v-col>
 
-          <v-card-text>
-            <div class="font-weight-bold ml-8 mb-2">Today</div>
-            <v-timeline align-top dense>
-              <v-timeline-item
-                v-for="message in messages"
-                :key="message.time"
-                :color="message.color"
-                small
-              >
-                <div>
-                  <div class="font-weight-normal">
-                    <strong>{{ message.from }}</strong> @{{ message.time }}
-                  </div>
-                  <div>{{ message.message }}</div>
-                </div>
-              </v-timeline-item>
-            </v-timeline>
-          </v-card-text>
-        </v-card>
+      <v-col cols="12" sm="8">
+        <v-sheet min-height="70vh" rounded="lg">
+          <v-carousel delimiter-icon="mdi-minus">
+            <v-carousel-item v-for="(slide, i) in slides" :key="i">
+              <v-img :src="slide" :aspect-ratio="16 / 9">
+                <vue-particles color="#dedede"></vue-particles>
+              </v-img>
+            </v-carousel-item>
+          </v-carousel>
+        </v-sheet>
       </v-col>
-      <v-col>
-        <v-carousel delimiter-icon="mdi-minus">
-          <v-carousel-item v-for="(slide, i) in slides" :key="i">
-            <v-img :src="slide" :aspect-ratio="16 / 9">
-              <vue-particles color="#dedede"></vue-particles>
-            </v-img>
-          </v-carousel-item>
-        </v-carousel>
-      </v-col>
-      <v-col cols="12" md="3">
-        <Todos></Todos>
+
+      <v-col cols="12" sm="2">
+        <v-sheet rounded="lg" min-height="300">
+          <Todos></Todos>
+        </v-sheet>
       </v-col>
     </v-row>
   </v-container>

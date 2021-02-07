@@ -64,6 +64,14 @@
       <v-btn icon @click="handleFullScreen()">
         <v-icon>mdi-fullscreen</v-icon>
       </v-btn>
+
+      <v-btn icon flat>
+        <v-badge color="orange" overlap>
+          <span slot="badge">4</span>
+          <v-icon>mdi-email</v-icon>
+        </v-badge>
+      </v-btn>
+
       <v-menu offset-y :nudge-bottom="14">
         <template v-slot:activator="{ on }">
           <v-btn icon flat v-on="on">
