@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h2>{{ type }}</h2>
     <v-row>
       <v-col>
         <v-slide-group class="d-flex justify-center">
@@ -8,7 +9,11 @@
             v-for="(type, index) in types"
             :key="index"
           >
-            <v-chip :color="type.name | type2Color" dark>
+            <v-chip
+              :color="type.name | type2Color"
+              dark
+              @click="setFilter(type.name)"
+            >
               <v-avatar left class="white darken-2" font-color="balck" dark
                 >1</v-avatar
               >
@@ -23,22 +28,33 @@
       <v-col class="d-flex justify-end">
         <blockquote class="blockquote">
           本页面收录了
-          <countTo :endVal="idoles.length"></countTo>个人物
+          <countTo :endVal="filterIdoles.num"></countTo>个人物
         </blockquote>
       </v-col>
     </v-row>
 
     <v-row>
-      <v-col cols="12" md="2" v-for="(idole, i) in idoles" :key="i">
+      <v-col
+        cols="12"
+        xl="2"
+        lg="3"
+        md="4"
+        sm="6"
+        v-for="(idole, i) in filterIdoles.arr"
+        :key="i"
+      >
         <v-hover v-slot:default="{ hover }">
           <v-card
+            class="ma-3"
             shaped
             :class="hover ? 'animate__animated animate__pulse' : ''"
           >
             <v-card-title class="font-black">
               {{ idole.name }}
               <v-spacer></v-spacer>
-              <v-chip dark :color="idole.color">{{ idole.type }}</v-chip>
+              <v-chip dark :color="idole.type | type2Color">{{
+                idole.type
+              }}</v-chip>
             </v-card-title>
             <v-card-subtitle class="font-weight-thin">
               <span>{{ idole.description }}</span>
@@ -68,15 +84,32 @@ export default {
   data: () => ({
     stadium: require("@/assets/stadium.png"),
     types: [
+      { name: "所有", icon: "mdi-account" },
       { name: "音乐", icon: "mdi-music" },
-      { name: "足球", icon: "mdi-soccer" },
+      { name: "体育", icon: "mdi-soccer" },
       { name: "艺术", icon: "mdi-palette" },
-      { name: "动漫", icon: "" },
+      { name: "动漫", icon: "mdi-khanda" },
       { name: "虚构", icon: "mdi-account-circle" },
-      // { name: "音乐", icon: "" }
     ],
     idoles: idoles,
+    type: "所有",
   }),
+  computed: {
+    // 计算属性的 getter
+    filterIdoles: function () {
+      // `this` 指向 vm 实例
+      let filterIdoles = this.idoles;
+      if (this.type !== "所有")
+        filterIdoles = this.idoles.filter((idole) => idole.type === this.type);
+
+      return { arr: filterIdoles, num: filterIdoles.length };
+    },
+  },
+  methods: {
+    setFilter(type) {
+      this.type = type;
+    },
+  },
   filters: {
     type2Color(v) {
       if (v == "音乐") {
@@ -85,7 +118,7 @@ export default {
         return "deep-orange darken-1";
       } else if (v == "艺术") {
         return "cyan";
-      } else if (v == "足球") {
+      } else if (v == "体育") {
         return "indigo";
       } else {
         return;
